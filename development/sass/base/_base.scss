@@ -1,0 +1,50 @@
+body {
+  overflow-x: hidden;
+  font-family: "Comfortaa", cursive;
+  font-size: 14px;
+  min-width: 320px;
+  max-width: 100vw;
+  position: relative;
+  line-height: 1.42857;
+  letter-spacing: 1px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  &:visited, &:link, &:hover {
+    outline: none;
+  }
+}
+
+
+input:focus, textarea:focus, button:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: $clr_black;
+}
+::-moz-placeholder {
+  color: $clr_black;
+}
+:-ms-input-placeholder {
+  color: $clr_black;
+}
+:-moz-placeholder {
+  color: $clr_black;
+}
+
+.ac {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden { display: none; }
+
+
+.bg-white {
+  background-color: $clr_white;
+}
