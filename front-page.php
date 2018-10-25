@@ -15,26 +15,18 @@ global $webshowcase;
 get_header(); ?>
 
 <main id="main">
-	<div class="top-baner">
-		<div class="text-container">
-			<h1 class="h1"><?php echo get_field('hp_top_title'); ?></h1>
-			<strong><?php echo get_field('hp_top_subtitle'); ?></strong>
-			<div class="text-box">
-				<p><?php echo get_field('hp_top_text'); ?></p>
+	<div class="top-baner bg-img">
+		<img src="" alt="">
+		<div class="container">
+			<div class="top-baner-box">
+				<h1 class="h1">Setting Ourself Apart Through Performance & Determination</h1>
+				<div class="text-box">
+					<p>Providing investors with solutions in increasingly challenging markets.</p>
+				</div>
+				<a href="#" class="default-link">LEARN MORE About our Funds</a>
 			</div>
-			<strong><?php echo get_field('hp_cta_title'); ?></strong>
-			<a href="<?php echo get_field('hp_cta_link'); ?>" class="default-btn">LEARN MORE</a>
 		</div>
 	</div>
-	<div class="partners">
-		<div class="green-logo bg-img"><img src="<?php echo get_template_directory_uri(); ?>/images/green-logo.jpg" alt="image description"></div>
-		<div class="text-container">
-			<h2 class="h2">PARTNERS</h2>
-			<div class="text-box">
-				<p>Reserve Trust has partnered with the strongest and most trustworthy financial institutions to ensure that you always receive rapid, secure and cost-effective services.</p>
-			</div>
-		</div>
-	</div>	
 </main><!-- .site-main --><!-- .content-area -->
 
 <?php get_footer(); ?>
