@@ -6,9 +6,9 @@
 #header{
   padding: 15px 0;
   box-shadow: 0 0 16px rgba(18,18,18,0.1);
-  background: #000;
-/*   position: absolute;
-width: 100%; */
+  position: absolute;
+  width: 100%;
+  z-index: 10;
 }
 .main-nav{
   padding-top: 15px;

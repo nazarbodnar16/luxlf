@@ -16,17 +16,80 @@ get_header(); ?>
 
 <main id="main">
 	<div class="top-baner bg-img">
-		<img src="" alt="">
+		<img src="<?php echo get_template_directory_uri(); ?>/images/top-baner.jpg" alt="">
 		<div class="container">
 			<div class="top-baner-box">
-				<h1 class="h1">Setting Ourself Apart Through Performance & Determination</h1>
-				<div class="text-box">
-					<p>Providing investors with solutions in increasingly challenging markets.</p>
+				<div class="info">
+					<h1 class="h1">Setting Ourself Apart Through Performance & Determination</h1>
+					<div class="text-box">
+						<p>Providing investors with solutions in increasingly challenging markets.</p>
+					</div>
+					<a href="#" class="default-link">LEARN MORE About our Funds</a>
 				</div>
-				<a href="#" class="default-link">LEARN MORE About our Funds</a>
 			</div>
 		</div>
 	</div>
+	<div class="success-experience">
+		<div class="img bg-img">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/success-img-before.png" alt="">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="right-block col-md-6">
+					<div class="success-experience--info">
+						<h2>Success Through Experience</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.</p>
+						<a href="#" class="default-link">LEARN ABOUT OUR TEAM</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="featured-news">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<a href="#">
+						<figure class="item-list">
+							<div class="img bg-img"><img src="<?php echo get_template_directory_uri(); ?>/images/item-1.jpg" alt=""></div>
+							<figcaption class="item-list--info">
+								<div class="text">
+									<p>Luxembourg Life Fund honored with 2018 Investors Choice Award</p>
+								</div>
+								<a class="default-link" href="#">LEARN MORE</a>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="#">
+						<figure class="item-list">
+							<div class="img bg-img"><img src="<?php echo get_template_directory_uri(); ?>/images/item-2.jpg" alt=""></div>
+							<figcaption class="item-list--info">
+								<div class="text">
+									<p>Luxembourg's Carlisle Management Successfully Concludes Large Scale Life Settlements Sale</p>
+								</div>
+								<a class="default-link" href="#">LEARN MORE</a>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="#">
+						<figure class="item-list">
+							<div class="img bg-img"><img src="<?php echo get_template_directory_uri(); ?>/images/item-3.jpg" alt=""></div>
+							<figcaption class="item-list--info">
+								<div class="text">
+									<p>Luxembourg Life Fund honored with 2018 Investors Choice Award</p>
+								</div>
+								<a class="default-link" href="#">LEARN MORE</a>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>		
 </main><!-- .site-main --><!-- .content-area -->
 
 <?php get_footer(); ?>

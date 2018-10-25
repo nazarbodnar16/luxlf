@@ -1,0 +1,118 @@
+.right-block{
+	float: right;
+}
+.left-block{
+	float: left;
+}
+.w50{
+	width: 50%;
+}
+.top-baner{
+	background-size: cover;
+	background-position: 50%;
+	position: relative;
+	.top-baner-box{
+		display: table-cell;
+		vertical-align: middle;
+		width: 1%;
+		height: 100vh;
+		.info{
+			max-width: 855px;
+			color: $clr_white;
+			@media (max-width: 991px){
+				max-width: 100%;
+			}
+			h1{
+				font: 400 60px/63px $font-gilda, sans-serif;
+				margin: 0 0 20px;
+				@media (max-width: 991px){
+					font-size: 48px;
+					line-height: 55px;
+				}
+				@media (max-width: 768px){
+					font-size: 36px;
+					line-height: 44px;
+				}
+				@media (max-width: 580px){
+					font-size: 27px;
+					line-height: 32px;
+				}
+			}
+			.text-box{
+				font-size: 24px;
+				margin: 0 0 20px;
+				@media (max-width: 580px){
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+.success-experience{
+	.img{
+		height: 500px;
+		width: 50%;
+		position: absolute;
+		background-size: cover;
+		background-position: 50%;
+		@media (max-width: 1200px){
+			height: 400px;
+		}
+		@media (max-width: 991px){
+			display: none;
+		}
+	}
+	&--info{
+		height: 500px;
+		display: table-cell;
+		vertical-align: middle;
+		font-size: 18px;
+		line-height: 30px;
+		padding-left: 25px;
+		@media (max-width: 1200px){
+			height: 400px;
+		}
+		@media (max-width: 768px){
+			height: auto;
+			padding: 50px 0;
+		}
+		@media (max-width: 991px){
+			padding-left: 0;
+		}
+		h2{
+			font: 400 40px/43px $font-gilda, sans-serif;
+			margin-bottom: 20px;
+		}
+		p{
+			margin-bottom: 20px;
+		}
+	}
+}
+.featured-news{
+	padding: 80px 0 90px;
+	background: $clr_light;
+}
+
+.item-list{
+	background: $clr_white;
+	@media (max-width: 991px){
+		margin-bottom: 20px;
+	}
+	a{
+		text-decoration: none;
+		color: $clr_black;
+	}
+	.img{
+		background-size: cover;
+		background-position: 50%;
+		background-repeat: no-repeat;
+		height: 240px;
+	}
+	&--info{
+		padding: 30px 25px 25px;
+		font: 400 23px/30px $font-gilda, sans-serif;
+	}
+	.default-link{
+		color: $clr_orange;
+	}	
+}
