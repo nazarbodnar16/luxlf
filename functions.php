@@ -37,7 +37,7 @@ add_theme_support( 'html5', array(
 function my_assets() {
 
 	// Add Google Fonts
-	wp_enqueue_style( 'font', 'https://fonts.googleapis.com/css?family=Gilda+Display' );
+	wp_enqueue_style( 'font', 'https://fonts.googleapis.com/css?family=Gilda+Display|Montserrat:300,400,500,600,700,900' );
 
 	wp_enqueue_style( 'id-main', get_stylesheet_uri() );
 

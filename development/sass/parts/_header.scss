@@ -3,12 +3,17 @@
   padding: 0 15px;
   margin: 0 auto;
 }
-#header{
-  padding: 15px 0;
-  box-shadow: 0 0 16px rgba(18,18,18,0.1);
+body.home #header{
+  background: transparent;
   position: absolute;
+}
+#header{
+  padding: 20px 0;
+  box-shadow: 0 0 16px rgba(18,18,18,0.1);
+  position: relative;
   width: 100%;
   z-index: 10;
+  background: #414141;
 }
 .main-nav{
   padding-top: 15px;
@@ -36,6 +41,7 @@
         color: $clr_white;
         text-transform: uppercase;
         position: relative;
+        font: 400 14px/16px $font-montserrat;
         &:hover{
           text-decoration: none;
           &:before{

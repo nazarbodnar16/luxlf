@@ -7,6 +7,21 @@
 .w50{
 	width: 50%;
 }
+.dt{
+	display: table;
+}
+.black-bg{
+	background: $clr_black;
+}
+.white-bg{
+	background: $clr_white;
+}
+.white-bg-padding{
+	background: $clr_white;
+	padding: 10px 20px;
+	display: inline-block;
+}
+
 .top-baner{
 	background-size: cover;
 	background-position: 50%;
@@ -41,6 +56,7 @@
 			.text-box{
 				font-size: 24px;
 				margin: 0 0 20px;
+				font: 300 22px/24px $font-montserrat;
 				@media (max-width: 580px){
 					font-size: 20px;
 				}
@@ -49,29 +65,45 @@
 	}
 }
 .success-experience{
+	position: relative;
+	&.mod-right{
+		.right-block{
+			float: left;
+		}
+		.img{
+			left: 50%;
+		}
+		.success-experience--info{
+			padding-left: 0;
+		}
+	}
+	&.mod-black{
+		color: $clr_white;
+	}
 	.img{
-		height: 500px;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
 		width: 50%;
 		position: absolute;
 		background-size: cover;
 		background-position: 50%;
-		@media (max-width: 1200px){
-			height: 400px;
-		}
 		@media (max-width: 991px){
 			display: none;
 		}
 	}
+	.dt{
+		min-height: 500px;
+		@media (max-width: 991px){
+			min-height: 300px;
+		}
+	}
 	&--info{
-		height: 500px;
 		display: table-cell;
 		vertical-align: middle;
-		font-size: 18px;
-		line-height: 30px;
-		padding-left: 25px;
-		@media (max-width: 1200px){
-			height: 400px;
-		}
+		font: 300 16px/20px $font-montserrat;
+		padding: 50px 0 50px 25px;
 		@media (max-width: 768px){
 			height: auto;
 			padding: 50px 0;
@@ -115,4 +147,179 @@
 	.default-link{
 		color: $clr_orange;
 	}	
+}
+
+.performance{
+	background: $clr_black;
+	position: relative;
+	padding: 60px 0 50px;
+	border-bottom: 1px solid #262626;
+	h3{
+		font-size: 18px;
+		line-height: 24px;
+		color: $clr_white;
+		margin-bottom: 20px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.img{
+		text-align: center;
+	}
+	.bg-img{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+}
+
+.performance-line{
+	padding: 30px 0;
+	background: $clr_black;	
+}
+
+.inner-top-baner{
+	background-size: cover;
+	background-position: 50% 75%;
+	position: relative;
+	.top-baner-box{
+		display: table-cell;
+		vertical-align: middle;
+		width: 1%;
+		height: 60vh;
+		@media (max-width: 768px){
+			height: 70vh;
+		}
+		.info{
+			max-width: 550px;
+			color: $clr_black;
+			font-size: 36px;
+			line-height: 43px;
+			@media (max-width: 991px){
+				font-size: 24px;
+				line-height: 28px;
+			}
+			@media (max-width: 580px){
+				font-size: 18px;
+			}
+		}
+	}
+}
+/* subscribe */
+.subscribe{
+	background: $clr_light;
+	padding: 60px 0;
+	.subscribe-form{
+		margin-top: 15px;
+	}
+}
+.subscribe-text{
+	font: 300 16px/24px $font-montserrat;
+	letter-spacing: 0;
+	h2{
+		font: 400 40px/43px $font-gilda;
+		margin-bottom: 10px;
+		letter-spacing: 0;
+	}
+}
+.subscribe-form{
+	position: relative;
+	form{
+		display: flex;
+		@media (max-width: 580px){
+			display: block;
+		}
+	}
+	.form-control{
+		background: $clr_white;
+		font: 700 14px/24px $font-montserrat;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: #a6a6a6;
+		border: none;
+		border-radius: 0;
+		padding: 10px 20px;
+		height: 54px;
+		line-height: 54px;
+	}
+	.submit-btn{
+		@media (max-width: 580px){
+			width: 100%;
+		}
+	}
+}
+/* end-subscribe */
+
+
+/* contact-us */
+.contact-us{
+	background: $clr_light;
+	padding: 60px 0;
+	.contact-btn{
+		margin-left: 80px;
+		@media (max-width: 991px){
+			margin-left: 0;
+			margin-top: 25px;
+		}
+	}
+}
+.contact-text{
+	font: 300 16px/24px $font-montserrat;
+	letter-spacing: 0;
+	h2{
+		font: 400 40px/43px $font-gilda;
+		margin-bottom: 10px;
+		letter-spacing: 0;
+	}
+}
+/* end-contact-us */
+
+
+/* team-info */
+.team-info{
+	background: $clr_light;
+	padding: 55px 0;
+	font: 400 24px/36px $font-gilda;
+	.team-info-descr{
+		font-size: 16px;
+		line-height: 30px;
+	}
+}
+.team-list{
+	padding: 60px 0;
+}
+.team-item{
+	color: $clr_black;
+	text-decoration: none;
+	margin-bottom: 20px;
+	display: block;
+	transition: all .3s;
+	&:hover{
+		text-decoration: none;
+		color: $clr_orange;
+	}
+	.img{
+		background-size: conver;
+		background-position: 50% 0;
+		background-repeat: no-repeat;
+		height: 270px;
+	}
+	.descr{
+		padding: 20px 0;
+		display: block;
+		.name{
+			font: 400 30px/48px $font-gilda;
+			display: block;
+			margin-bottom: 5px;
+		}
+		.possition{
+			font: 400 14px/14px $font-montserrat;
+			display: block;
+			letter-spacing: 1px;
+		}
+	}
 }

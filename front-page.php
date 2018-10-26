@@ -36,12 +36,42 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="right-block col-md-6">
-					<div class="success-experience--info">
-						<h2>Success Through Experience</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.</p>
-						<a href="#" class="default-link">LEARN ABOUT OUR TEAM</a>
+					<div class="dt">
+						<div class="success-experience--info">
+							<h2>Success Through Experience</h2>
+							<p>Carlisle is a leading, alternative assets investment manager. Our team applies its deep experience and specialized expertise. Carlisle contributes a unique set of attributes that aid in discovering high value and high growth alternative investments that have limited correlation to both traditional and non-traditional asset classes. On top of it, our unique fund management solutions provide a set of institutional investors including pension funds, family offices, endowments, banks and governmental organizations with tailor-made investment structures. We focus on delivering best value, integrity, transparency and responsiveness. </p>
+							<a href="#" class="default-link">LEARN ABOUT OUR TEAM</a>
+						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+	<div class="performance">
+		<div class="bg-img">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/p-bg.png" alt="">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h3>Life Insurance Carrier Ratings</h3>
+					<div class="img">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/table-1.png" alt="">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<h3>Fund Performance Year to Date</h3>
+					<div class="img">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/table-2.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="performance-line">
+		<div class="container">
+			<div class="img">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/table-3.jpg" alt="">
 			</div>
 		</div>
 	</div>

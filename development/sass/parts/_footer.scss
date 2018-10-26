@@ -7,6 +7,7 @@
 	color: $clr_white;
 	background: $clr_black;
 	padding: 55px 0 40px;
+	font: 300 14px/25px $font-montserrat;
 	.text-block{
 		@media (max-width: 991px){
 			margin-bottom: 20px;
@@ -42,6 +43,7 @@
 				color: $clr_white;
 				text-transform: uppercase;
 				position: relative;
+				font: 400 14px/18px $font-montserrat;
 				&:before{
 					position: absolute;
 					content:'';
