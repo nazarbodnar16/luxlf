@@ -1,6 +1,6 @@
 body {
   overflow-x: hidden;
-  font: 400 18px/30px $font-montserrat;
+  font: 400 16px/30px $font-montserrat;
   font-size: 14px;
   min-width: 320px;
   max-width: 100vw;
@@ -16,6 +16,7 @@ img {
 a {
   &:visited, &:link, &:hover {
     outline: none;
+    text-decoration: none;
   }
 }
 

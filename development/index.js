@@ -4,6 +4,19 @@ $(document).ready(function () {
     $(this).css('background-image', 'url(' + $(this).find('> img').attr('src') + ')').find('> img').hide();
 });
 
+$('.load-more').click(function() {
+  $(this).addClass('loading');
+  $('i').addClass('fa-spin db');
+  
+  setTimeout(function() {
+      setTimeout(function() {
+       $('i').removeClass('fa-spin db');
+       $('.load-more').removeClass('loading');
+      }, 1000);
+  }, 1000);
+  
+  return false;
+});
 
   $('<a href="#" class="open-menu"><span></span>Open Menu</a>').appendTo('#header .header-container');
   $('<span class="fader"/>').appendTo('body');
