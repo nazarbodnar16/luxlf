@@ -29,7 +29,7 @@ global $webshowcase;
 
 <body <?php body_class( $class ); ?>>
 	<header id="header">
-		<div class="header-container clearfix">
+		<div class="container clearfix">
 			<strong class="logo"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt=""></a></strong>
 			<nav class="main-nav">
 				<ul>
