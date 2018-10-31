@@ -52,5 +52,6 @@ $(document).ready(function () {
   $('.fader').click(function(){
     $('body').removeClass('search-opened');
   });
-  $('.item-list .item-list--info .text').matchHeight();
+  $('.item-list .item-list--info .text').matchHeight(); 
+  $('.tabs li a').matchHeight();
 })
