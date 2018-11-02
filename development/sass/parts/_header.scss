@@ -10,6 +10,9 @@ body.home #header{
   z-index: 10;
   background: #414141;
 }
+body.home #header .main-nav ul li a:before{
+  bottom: -5px;
+}
 .main-nav{
   padding-top: 15px;
   float: right;
