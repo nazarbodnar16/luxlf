@@ -4,8 +4,8 @@ Template Name: About
 */
 get_header(); ?>
 <main>
-	<div class="inner-top-baner bg-img">
-		<img src="<?php echo get_template_directory_uri(); ?>/images/inner-baner-bg.png" alt="">
+	<div class="inner-top-baner about-baner bg-img">
+		<img src="<?php echo get_template_directory_uri(); ?>/images/about-bg.png" alt="">
 		<div class="container">
 			<div class="top-baner-box">
 				<div class="info">

@@ -201,6 +201,25 @@
 	background-size: cover;
 	background-position: 50% 75%;
 	position: relative;
+	&.about-baner{
+		height: 500px;
+		@media (max-width: 768px){
+			height: auto;
+		}
+		.top-baner-box{
+			height: 500px;
+			@media (max-width: 768px){
+				height: 70vh;
+			}
+		}
+		.info{
+			@media (max-width: 991px){
+				background: rgba(255, 255, 255, .85);
+				padding: 10px;
+			}
+
+		}
+	}
 	.top-baner-box{
 		display: table-cell;
 		vertical-align: middle;
@@ -212,8 +231,7 @@
 		.info{
 			max-width: 550px;
 			color: $clr_black;
-			font-size: 36px;
-			line-height: 43px;
+			font: 400 36px/43px $font-gilda;
 			@media (max-width: 991px){
 				font-size: 24px;
 				line-height: 28px;
@@ -322,7 +340,7 @@
 		color: $clr_orange;
 	}
 	.img{
-		background-size: conver;
+		background-size: cover;
 		background-position: 50% 0;
 		background-repeat: no-repeat;
 		height: 270px;
