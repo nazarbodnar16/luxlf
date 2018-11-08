@@ -11,8 +11,9 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 //register menus
 register_nav_menus( array(
-	'menu_left'  => 'Menu header left',
-	'menu_right' => 'Menu header right'
+	'main_menu'  => 'Header menu',
+	'footer_menu_top' => 'Footer menu top',
+	'footer_menu_bottom' => 'Footer menu bottom'
 ) );
 
 add_theme_support( 'post-formats', array(
@@ -54,6 +55,7 @@ function my_assets() {
 
 	//Vendor scripts
 	wp_enqueue_script( 'id-vendor-script', get_template_directory_uri() . '/scripts/vendor.min.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'map-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAiTTPATyJxMQbWuSZdnai4qEbM7F2I42o', array(), '1.0.0', true );
 
 	//Custom scripts
 	wp_enqueue_script( 'matchHeight', get_template_directory_uri() . '/development/scripts/jquery.matchHeight-min.js', array(), '1.0.0', true );
@@ -72,42 +74,42 @@ add_theme_support( 'post-thumbnails' );
 //===============================================PRODUCTS CUSTOM POST TYPE========================================
 //====================================================================================================================
 
-function add_directors_posts() {
-	register_post_type(
-		'directors',
-		array(
-			'labels'       => array(
-				'name'               => 'Directors',
-				'singular_name'      => 'Director item',
-				'add_new'            => 'Add new',
-				'add_new_item'       => 'Add new item',
-				'edit'               => 'Edit',
-				'edit_item'          => 'Edit item',
-				'new_item'           => 'New item',
-				'view'               => 'View',
-				'view_item'          => 'View item',
-				'search_items'       => 'Search item',
-				'not_found'          => 'Not found',
-				'not_found_in_trash' => 'Not find in trash',
-			),
-			'public'       => true,
-			'hierarchical' => true,
-			'has_archive'  => true,
-			'menu_icon'    => 'dashicons-businessman',
-			'supports'     => array(
-				'title',
-				'editor',
-				'thumbnail',
-				//'post-formats',
-				'excerpt',
-				'directors_category'
-			),
-			'can_export'   => true,
-		)
-	);
-}
+// function add_directors_posts() {
+// 	register_post_type(
+// 		'directors',
+// 		array(
+// 			'labels'       => array(
+// 				'name'               => 'Directors',
+// 				'singular_name'      => 'Director item',
+// 				'add_new'            => 'Add new',
+// 				'add_new_item'       => 'Add new item',
+// 				'edit'               => 'Edit',
+// 				'edit_item'          => 'Edit item',
+// 				'new_item'           => 'New item',
+// 				'view'               => 'View',
+// 				'view_item'          => 'View item',
+// 				'search_items'       => 'Search item',
+// 				'not_found'          => 'Not found',
+// 				'not_found_in_trash' => 'Not find in trash',
+// 			),
+// 			'public'       => true,
+// 			'hierarchical' => true,
+// 			'has_archive'  => true,
+// 			'menu_icon'    => 'dashicons-businessman',
+// 			'supports'     => array(
+// 				'title',
+// 				'editor',
+// 				'thumbnail',
+// 				//'post-formats',
+// 				'excerpt',
+// 				'directors_category'
+// 			),
+// 			'can_export'   => true,
+// 		)
+// 	);
+// }
 
-add_action( 'init', 'add_directors_posts' );
+// add_action( 'init', 'add_directors_posts' );
 
 // function my_taxonomies_direcrors_artical() {
 //     $labels = array(
@@ -133,12 +135,42 @@ add_action( 'init', 'add_directors_posts' );
 // }
 // add_action( 'init', 'my_taxonomies_direcrors_artical', 0 );
 
-function wpb_move_comment_field_to_bottom( $fields ) {
-	$comment_field = $fields['comment'];
-	unset( $fields['comment'] );
-	$fields['comment'] = $comment_field;
+// function wpb_move_comment_field_to_bottom( $fields ) {
+// 	$comment_field = $fields['comment'];
+// 	unset( $fields['comment'] );
+// 	$fields['comment'] = $comment_field;
 
-	return $fields;
+// 	return $fields;
+// }
+
+// add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
+
+//register acf_options
+if ( function_exists( 'acf_add_options_page' ) ) {
+	acf_add_options_page( array(
+		'page_title' => 'Global Settings',
+		'menu_title' => 'Global Settings',
+		'menu_slug'  => 'global-general-settings',
+		'capability' => 'edit_posts',
+		'redirect'   => false
+	) );
+
+	// acf_add_options_sub_page(array(
+	//     'page_title'    => 'Theme Header Settings',
+	//     'menu_title'    => 'Header',
+	//     'parent_slug'   => 'theme-general-settings',
+	// ));
+	// acf_add_options_sub_page(array(
+	//     'page_title'    => 'Theme Footer Settings',
+	//     'menu_title'    => 'Footer',
+	//     'parent_slug'   => 'theme-general-settings',
+	// ));
 }
 
-add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
+// Acf google map API
+
+function my_acf_init() {
+	acf_update_setting( 'google_api_key', 'AIzaSyAiTTPATyJxMQbWuSZdnai4qEbM7F2I42o' );
+}
+
+add_action( 'acf/init', 'my_acf_init' );

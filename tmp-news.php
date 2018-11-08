@@ -13,7 +13,7 @@ get_header(); ?>
 		<div class="container">
 			<ul class="news-list">
 				<li class="news-list--item">
-					<a class="clearfix" href="#">
+					<a class="clearfix" href="/news-details">
 						<span class="news-img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/item-1.jpg" alt="">
 						</span>
@@ -26,7 +26,7 @@ get_header(); ?>
 					</a>
 				</li>
 				<li class="news-list--item">
-					<a href="#">
+					<a href="/news-details">
 						<span class="news-img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/item-2.jpg" alt="">
 						</span>
@@ -39,7 +39,7 @@ get_header(); ?>
 					</a>
 				</li>
 				<li class="news-list--item">
-					<a href="#">
+					<a href="/news-details">
 						<span class="news-img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/item-1.jpg" alt="">
 						</span>
@@ -52,7 +52,7 @@ get_header(); ?>
 					</a>
 				</li>
 				<li class="news-list--item">
-					<a href="#">
+					<a href="/news-details">
 						<span class="news-img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/item-3.jpg" alt="">
 						</span>
@@ -65,7 +65,7 @@ get_header(); ?>
 					</a>
 				</li>
 				<li class="news-list--item">
-					<a href="#">
+					<a href="/news-details">
 						<span class="news-img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/item-1.jpg" alt="">
 						</span>

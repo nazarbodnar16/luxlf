@@ -32,7 +32,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<a class="team-item" href="">
+					<a class="team-item" href="/team-details">
 						<div class="img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/1.png" alt="">
 						</div>
@@ -43,7 +43,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a class="team-item" href="">
+					<a class="team-item" href="/team-details">
 						<div class="img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/2.png" alt="">
 						</div>
@@ -54,7 +54,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a class="team-item" href="">
+					<a class="team-item" href="/team-details">
 						<div class="img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/3.png" alt="">
 						</div>
@@ -65,7 +65,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a class="team-item" href="">
+					<a class="team-item" href="/team-details">
 						<div class="img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/4.png" alt="">
 						</div>
@@ -76,7 +76,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a class="team-item" href="">
+					<a class="team-item" href="/team-details">
 						<div class="img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/5.png" alt="">
 						</div>
@@ -87,7 +87,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a class="team-item" href="">
+					<a class="team-item" href="/team-details">
 						<div class="img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/6.png" alt="">
 						</div>
@@ -98,7 +98,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a class="team-item" href="">
+					<a class="team-item" href="/team-details">
 						<div class="img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/7.png" alt="">
 						</div>
@@ -109,7 +109,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a class="team-item" href="">
+					<a class="team-item" href="/team-details">
 						<div class="img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/8.png" alt="">
 						</div>
@@ -120,7 +120,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a class="team-item" href="">
+					<a class="team-item" href="/team-details">
 						<div class="img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/9.png" alt="">
 						</div>

@@ -40,7 +40,7 @@ get_header(); ?>
 						<div class="success-experience--info">
 							<h2>Success Through Experience</h2>
 							<p>Carlisle is a leading, alternative assets investment manager. Our team applies its deep experience and specialized expertise. Carlisle contributes a unique set of attributes that aid in discovering high value and high growth alternative investments that have limited correlation to both traditional and non-traditional asset classes. On top of it, our unique fund management solutions provide a set of institutional investors including pension funds, family offices, endowments, banks and governmental organizations with tailor-made investment structures. We focus on delivering best value, integrity, transparency and responsiveness. </p>
-							<a href="#" class="default-link">LEARN ABOUT OUR TEAM</a>
+							<a href="/team" class="default-link">LEARN ABOUT OUR TEAM</a>
 						</div>
 					</div>
 				</div>
@@ -79,40 +79,40 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<a href="#">
+					<a href="/news-details">
 						<figure class="item-list">
 							<div class="img bg-img"><img src="<?php echo get_template_directory_uri(); ?>/images/item-1.jpg" alt=""></div>
 							<figcaption class="item-list--info">
 								<div class="text">
 									<p>Luxembourg Life Fund honored with 2018 Investors Choice Award</p>
 								</div>
-								<a class="default-link" href="#">LEARN MORE</a>
+								<a class="default-link" href="/news-details">LEARN MORE</a>
 							</figcaption>
 						</figure>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="#">
+					<a href="/news-details">
 						<figure class="item-list">
 							<div class="img bg-img"><img src="<?php echo get_template_directory_uri(); ?>/images/item-2.jpg" alt=""></div>
 							<figcaption class="item-list--info">
 								<div class="text">
 									<p>Luxembourg's Carlisle Management Successfully Concludes Large Scale Life Settlements Sale</p>
 								</div>
-								<a class="default-link" href="#">LEARN MORE</a>
+								<a class="default-link" href="/news-details">LEARN MORE</a>
 							</figcaption>
 						</figure>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="#">
+					<a href="/news-details">
 						<figure class="item-list">
 							<div class="img bg-img"><img src="<?php echo get_template_directory_uri(); ?>/images/item-3.jpg" alt=""></div>
 							<figcaption class="item-list--info">
 								<div class="text">
 									<p>Luxembourg Life Fund honored with 2018 Investors Choice Award</p>
 								</div>
-								<a class="default-link" href="#">LEARN MORE</a>
+								<a class="default-link" href="/news-details">LEARN MORE</a>
 							</figcaption>
 						</figure>
 					</a>
