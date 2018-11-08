@@ -78,7 +78,7 @@ get_header(); ?>
 					</a>
 				</li>
 			</ul>
-			<a href="#" class="default-btn load-more"><span><i class="fas fa-spinner"></i>load more</span></a>
+			<!-- <a href="#" class="default-btn load-more"><span><i class="fas fa-spinner"></i>load more</span></a> -->
 		</div>
 	</div>		
 </main>

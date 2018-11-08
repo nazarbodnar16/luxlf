@@ -4,7 +4,7 @@ $(document).ready(function () {
     $(this).css('background-image', 'url(' + $(this).find('> img').attr('src') + ')').find('> img').hide();
   });
 
-  $('.load-more').click(function() {
+/*  $('.load-more').click(function() {
     $(this).addClass('loading');
     $('i').addClass('fa-spin db');
 
@@ -16,7 +16,7 @@ $(document).ready(function () {
     }, 1000);
 
     return false;
-  });
+  });*/
 
   $('<a href="#" class="open-menu"><span></span>Open Menu</a>').appendTo('#header .container');
   $('<span class="fader"/>').appendTo('body');

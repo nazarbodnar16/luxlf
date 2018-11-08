@@ -163,19 +163,24 @@
 		color: $clr_orange;
 	}	
 }
-
+.scrollableArea{
+	width: auto!important;
+}
 .performance{
 	background: $clr_black;
 	position: relative;
 	padding: 60px 0 50px;
 	border-bottom: 1px solid #262626;
+
 	h3{
-		font-size: 18px;
-		line-height: 24px;
+		font-size: 16px;
+		line-height: 20px;
 		color: $clr_white;
 		margin-bottom: 20px;
 		text-align: center;
 		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 0;
 	}
 	.img{
 		text-align: center;
@@ -189,12 +194,41 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
+	.table-block{
+		border-top: 1px solid #262626;
+		font-weight: 700;
+		font-size: 14px;
+		max-width: 410px;
+		margin: 0 auto;
+		color: #fff;
+		margin-bottom: 30px;
+		th{
+			color: $clr_orange;
+			padding: 0 25px;
+		}
+		tr{
+			background: transparent;
+			&:nth-child(even){
+				background: #262626;
+			}
+			td{
+				padding-right: 30px;
+				padding: 0 25px;
+				&:last-child{
+					padding-right: 0;
+				}
+			}
+		}
+
+	}
 
 }
 
 .performance-line{
 	padding: 30px 0;
 	background: $clr_black;	
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .inner-top-baner{
@@ -479,8 +513,10 @@
 			color: $clr_black;
 			transition: all .3s;
 			&:hover{
-				color: $clr_orange;
-				text-decoration: none;
+				h3{
+					color: #014c8c;
+					text-decoration: none;
+				}
 			}
 		}
 		.news-text{
@@ -493,6 +529,7 @@
 			h3{
 				font: 400 24px/37px $font-gilda;
 				margin-bottom: 10px;
+				transition: all .3s;
 				@media (max-width: 991px){
 					font: 400 19px/30px $font-gilda;
 				}
