@@ -66,3 +66,24 @@
 		color: $clr_white;
 	}
 }
+
+
+.discard-btn{
+	background: #cdcdcd;
+	border: none;
+	color: $clr_white;
+	text-transform: uppercase;
+	padding: 10px 25px;
+	font: 700 14px/16px $font-montserrat;
+}
+.agree-btn{
+	background: $clr_orange;
+	border: none;
+	color: $clr_white;
+	text-transform: uppercase;
+	padding: 10px 25px;
+	font: 700 14px/16px $font-montserrat;
+	&:disabled{
+		background: #cdcdcd;
+	}
+}

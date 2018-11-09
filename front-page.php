@@ -25,6 +25,8 @@ get_header(); ?>
 						<p>Providing investors with solutions in increasingly challenging markets.</p>
 					</div>
 					<a href="#" class="default-link">LEARN MORE About our Funds</a>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notice">Launch demo modal</button>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact-modal">Launch demo modal</button>
 				</div>
 			</div>
 		</div>
