@@ -7,7 +7,7 @@
  * It is used to display a page when nothing more specific matches a query.
  * E.g., it puts together the home page when no home.php file exists.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link //codex.wordpress.org/Template_Hierarchy
  *
  * @package webshowcase
  */
@@ -107,8 +107,8 @@ get_header(); ?>
 				<div class="col-md-6">
 					<h3>Fund Performance Year to Date</h3>
 					<div class="pane-content">
-						<script language="JavaScript" type="text/javascript" src="http://www.thefinancials.com/syndicated/CARLISLE/Thumbnails.js"></script>
-						<script language="JavaScript" type="text/javascript" src="http://www.theFinancials.com/syndicated/CARLISLE/CARLISLEm_MarketUpdate.js"></script>
+						<script language="JavaScript" type="text/javascript" src="//www.thefinancials.com/syndicated/CARLISLE/Thumbnails.js"></script>
+						<script language="JavaScript" type="text/javascript" src="//www.theFinancials.com/syndicated/CARLISLE/CARLISLEm_MarketUpdate.js"></script>
 						<script language="JavaScript" type="text/javascript">
 							document.writeln(CARLISLEm_MarketUpdate('CARLISLE'));
 						</script>
@@ -128,12 +128,12 @@ get_header(); ?>
 					<!--The Panel Widget adapt to the size of its parent container.  Place the code below in a narrow container for vertical orientation or a wide container for horizontal orientation-->
 					<!--Modify the 'tilewidth' parameter in the code below to change the width of the individual tiles-->
 					<!--Modify the 'fontsize', 'bgcolor', and 'fontcolor' parameters in the code below to change the appearance of the Panel Widget-->
-					<script language="JavaScript" type="text/javascript" src="http://www.thefinancials.com/ShowPanel.aspx?pid=CARLISLE&amp;id=2514&amp;tilewidth=175&amp;fontsize=12&amp;bgcolor=000000&amp;fontcolor=FAFAFA&amp;bordercolor=000000&amp;showvalueonrow2=false&amp;numtileswide=10&amp;scrollSpeedFromZeroToTen=5&amp;showchange=true">
+					<script language="JavaScript" type="text/javascript" src="//www.thefinancials.com/ShowPanel.aspx?pid=CARLISLE&amp;id=2514&amp;tilewidth=175&amp;fontsize=12&amp;bgcolor=000000&amp;fontcolor=FAFAFA&amp;bordercolor=000000&amp;showvalueonrow2=false&amp;numtileswide=10&amp;scrollSpeedFromZeroToTen=5&amp;showchange=true">
 					</script>
-					<link href="https://www.thefinancials.com/s_Styles/Panels.css" rel="stylesheet" type="text/css">
-					<link href="https://www.thefinancials.com/syndicated/CARLISLE/Styles/Panels.css" rel="stylesheet" type="text/css">
-					<link href="https://www.thefinancials.com/s_styles/magnific-popup.css" rel="stylesheet" type="text/css">
-					<script src="https://www.theFinancials.com/s_js/magnific-popup.js"></script>
+					<link href="//www.thefinancials.com/s_Styles/Panels.css" rel="stylesheet" type="text/css">
+					<link href="//www.thefinancials.com/syndicated/CARLISLE/Styles/Panels.css" rel="stylesheet" type="text/css">
+					<link href="//www.thefinancials.com/s_styles/magnific-popup.css" rel="stylesheet" type="text/css">
+					<script src="//www.theFinancials.com/s_js/magnific-popup.js"></script>
 				</div>
 			</marquee>
 		</div>
