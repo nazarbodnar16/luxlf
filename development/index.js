@@ -55,3 +55,26 @@ $(document).ready(function () {
   $('.item-list .item-list--info .text').matchHeight(); 
   $('.tabs li a').matchHeight();
 })
+$(function(){
+    // If the cookie does not exist
+    if ($.cookie('modalshow') === null) 
+    {
+       // Show the modal
+       $('#notice').modal('show');
+       var expiryDate = new Date();
+       var hours = 168;
+       expiryDate.setTime(expiryDate.getTime() + (hours * 3600 * 1000));
+
+       // Create cookie to expire in 168 hours (1 week)
+       $.cookie("modalshow", "false", { path: '/', expires: expiryDate });
+    }
+});
+
+
+if (document.cookie.indexOf("modalshow=true") < 0) {
+    $('#notice').modal('show');
+    var expiryDate = new Date();
+    var hours = 168;
+    expiryDate.setTime(expiryDate.getTime() + (hours * 3600 * 1000));
+    document.cookie = "modalshow=true; expires=" + expiryDate + "; path=/";
+}
