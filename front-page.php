@@ -15,8 +15,7 @@ global $webshowcase;
 get_header(); ?>
 
 <main id="main">
-	<div class="top-baner bg-img">
-		<img src="<?php echo get_template_directory_uri(); ?>/images/top-baner.jpg" alt="">
+	<div class="top-baner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/top-baner.jpg)">
 		<div class="container">
 			<div class="top-baner-box">
 				<div class="info">
@@ -25,8 +24,9 @@ get_header(); ?>
 						<p>Providing investors with solutions in increasingly challenging markets.</p>
 					</div>
 					<a href="#" class="default-link">LEARN MORE About our Funds</a>
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notice">Launch demo modal</button>
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact-modal">Launch demo modal</button>
+					<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notice">Launch demo modal</button> -->
+					<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact-modal">Launch demo modal</button> -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#download-modal">Launch demo modal</button>
 				</div>
 			</div>
 		</div>

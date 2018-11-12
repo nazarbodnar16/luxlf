@@ -4,8 +4,7 @@ Template Name: Team
 */
 get_header(); ?>
 <main>
-	<div class="inner-top-baner bg-img">
-		<img src="<?php echo get_template_directory_uri(); ?>/images/team-baner-bg.png" alt="">
+	<div class="inner-top-baner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/team-baner-bg.png">
 		<div class="container">
 			<div class="top-baner-box">
 				<div class="info white-bg-padding">
@@ -144,7 +143,7 @@ get_header(); ?>
 				</div>
 				<div class="col-md-6">
 					<div class="contact-btn">
-						<a class="default-btn" href="">contact us</a>
+						<a class="default-btn" href="" data-toggle="modal" data-target="#contact-modal">contact us</a>
 					</div>
 				</div>
 			</div>

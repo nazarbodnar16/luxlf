@@ -75,6 +75,9 @@
 	text-transform: uppercase;
 	padding: 10px 25px;
 	font: 700 14px/16px $font-montserrat;
+	&:hover{
+		color: $clr_white;
+	}
 }
 .agree-btn{
 	background: $clr_orange;

@@ -4,8 +4,7 @@ Template Name: Contact Us
 */
 get_header(); ?>
 <main>
-	<div class="inner-top-baner bg-img">
-		<img src="<?php echo get_template_directory_uri(); ?>/images/contact-us-bg.png" alt="">
+	<div class="inner-top-baner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/contact-us-bg.png">
 		<div class="container">
 			<div class="top-baner-box">
 				<div class="info">

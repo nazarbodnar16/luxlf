@@ -61,6 +61,10 @@ $(function(){
     {
        // Show the modal
        $('#notice').modal('show');
+       $('#myModal').modal({
+    backdrop: 'static',
+    keyboard: false
+})
        var expiryDate = new Date();
        var hours = 168;
        expiryDate.setTime(expiryDate.getTime() + (hours * 3600 * 1000));
@@ -73,6 +77,10 @@ $(function(){
 
 if (document.cookie.indexOf("modalshow=true") < 0) {
     $('#notice').modal('show');
+    $('#myModal').modal({
+    backdrop: 'static',
+    keyboard: false
+})
     var expiryDate = new Date();
     var hours = 168;
     expiryDate.setTime(expiryDate.getTime() + (hours * 3600 * 1000));

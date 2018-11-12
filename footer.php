@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="notice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="notice" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -53,8 +53,8 @@
                    <label for="tick"></label>
                </p>
            </div>
-           <button type="button" class="agree-btn"  name="terms" disabled id="terms">I AGREE</button>
-           <button type="button" class="discard-btn" data-dismiss="modal">I Disagree</button>
+           <button type="button" class="agree-btn"  name="terms" disabled id="terms" data-dismiss="modal">I AGREE</button>
+           <a href="https://www.google.com/" class="discard-btn">I Disagree</a>
        </div>
    </div>
 </div>
@@ -81,6 +81,45 @@
                     <input class="form-control" type="text" placeholder="Telephone">
                     <input class="form-control" type="text" placeholder="Type of Inquiry">
                     <textarea class="form-control textarea" name="" id="" placeholder="Comments"></textarea>
+                </form>
+                <span>
+                    <input type="checkbox" id="test1"  checked="checked" />
+                    <label for="test1">Request Funds Overview</label>
+                </span>
+                <div>
+                    <input type="checkbox" id="test2" />
+                    <label for="test2">Subscribe to News & Updates</label>
+                </div>
+                <input class="default-btn submit-btn" type="submit" value="submit">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade" id="download-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close-modal" data-dismiss="modal">
+            <i class="fas fa-times"></i>
+        </span>
+        <div class="text">
+            <h4>Thank You</h4>
+            <p>for requesting the following document. <span>Please complete for immediate download</span></p>
+        </div>
+    </div>
+    <div class="modal-body">
+        <div class="contact-box-form">
+            <div class="contact-form">
+                <form action="">
+                    <input class="form-control" type="text" placeholder="FULL NAME">
+                    <input class="form-control" type="text" placeholder="BUSINESS">
+                    <input class="form-control" type="text" placeholder="Email">
+                    <input class="form-control" type="text" placeholder="Telephone">
+                    <input class="form-control" type="text" placeholder="Type of Inquiry">
                 </form>
                 <span>
                     <input type="checkbox" id="test1"  checked="checked" />
