@@ -1,13 +1,10 @@
-<?php
-/*
-Template Name: News Detail
-*/
-get_header(); ?>
+<?php get_header(); ?>
+<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
 <main>
 	<div class="news-detail">
 		<div class="text-container">
-			<h1>Carlisle Management Company and the Luxembourg Life Fund Honored with Prestigious Industry Awards</h1>
-			<span class="date">24 April, 2018</span>
+			<h1><?php echo get_the_title(); ?></h1>
+			<span class="date"><?php echo get_the_date('j F, Y') ?></span>
 			<div class="img bg-img">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/news-detail.jpg" alt="">
 			</div>
@@ -31,18 +28,14 @@ get_header(); ?>
 				<div class="col-md-3">
 					<div class="tag-box">
 						<h2>TAGS</h2>
-						<ul class="tag-list">
-							<li class="tag-list--item"><a href="#">Lorem</a></li>
-							<li class="tag-list--item"><a href="#">Management</a></li>
-							<li class="tag-list--item"><a href="#">Lorem Ipsum</a></li>
-							<li class="tag-list--item"><a href="#">Company</a></li>
-							<li class="tag-list--item"><a href="#">Luxembourg Life Fund</a></li>
-						</ul>
+						<?php the_tags( '<ul class="tag-list"><li class="tag-list--item">', '</li><li class="tag-list--item">', '</li></ul>' ); ?>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+<?php endwhile; ?>
+<?php endif; ?>
 	<div class="subscribe">
 		<div class="container">
 			<div class="row">

@@ -1,14 +1,10 @@
-<?php
-/*
-Template Name: Team
-*/
-get_header(); ?>
+<?php get_header(); ?>
 <main>
-	<div class="inner-top-baner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/team-baner-bg.png">
+	<div class="inner-top-baner" style="background-image: url(<?php echo get_field('team_top_background_image', 'cpt_team'); ?>">
 		<div class="container">
 			<div class="top-baner-box">
 				<div class="info white-bg-padding">
-					<p>A Team Dedicated to You</p>
+					<p><?php echo get_field('team_page_title', 'cpt_team'); ?></p>
 				</div>
 			</div>
 		</div>
@@ -17,11 +13,11 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<p>We are passionate about what we do, and through our close relationships with institutional investors, consultants, and financial advisors globally</p>
+					<p><?php echo get_field('team_left_column_description', 'cpt_team'); ?></p>
 				</div>
 				<div class="col-md-6">
 					<div class="team-info-descr">
-						<p>The Carlisle executive team represents the leading talent in life settlements. Over 30 years of combined experience has provided us with a strong network of global contacts, and has allowed us to build on our unrivaled expertise in life settlement providers, brokerages and capital markets.</p>
+						<p><?php echo get_field('team_right_column_description', 'cpt_team'); ?></p>
 					</div>
 				</div>
 			</div>
@@ -30,7 +26,45 @@ get_header(); ?>
 	<div class="team-list">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+
+
+<?php 
+
+$posts = get_field('team_member_board', 'cpt_team');
+
+if( $posts ): ?>
+
+    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+        <?php setup_postdata($post); ?>
+
+        		<div class="col-md-4">
+					<a class="team-item" href="<?php the_permalink(); ?>">
+						<div class="img bg-img">
+							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">
+						</div>
+						<span class="descr">
+							<span class="name"><?php echo get_the_title(); ?></span>
+							<span class="possition"><?php echo get_field('team_member_position'); ?></span>
+						</span>
+					</a>
+				</div>
+
+    <?php endforeach; ?>
+
+    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+<?php endif; ?>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 				<div class="col-md-4">
 					<a class="team-item" href="/team-details">
 						<div class="img bg-img">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/1.png" alt="">
@@ -128,7 +162,7 @@ get_header(); ?>
 							<span class="possition">Chief Executive Officer</span>
 						</span>
 					</a>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
