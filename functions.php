@@ -68,52 +68,51 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 //Allow post thumbnails
 add_theme_support( 'post-thumbnails' );
 
-// Cusctom post type Direcrors
+// ====================================================================================================================
+// ===============================================NEWS CUSTOM POST TYPE================================================
+// ====================================================================================================================
 
-//====================================================================================================================
-//===============================================PRODUCTS CUSTOM POST TYPE========================================
-//====================================================================================================================
+function add_news_posts() {
+	register_post_type(
+		'news',
+		array(
+			'labels'       => array(
+				'name'               => 'News',
+				'singular_name'      => 'News item',
+				'add_new'            => 'Add new',
+				'add_new_item'       => 'Add new item',
+				'edit'               => 'Edit',
+				'edit_item'          => 'Edit item',
+				'new_item'           => 'New item',
+				'view'               => 'View',
+				'view_item'          => 'View item',
+				'search_items'       => 'Search item',
+				'not_found'          => 'Not found',
+				'not_found_in_trash' => 'Not find in trash',
+			),
+			'public'       => true,
+			'hierarchical' => true,
+			'has_archive'  => true,
+			'menu_icon'    => 'dashicons-media-document',
+			'supports'     => array(
+				'title',
+				'editor',
+				'thumbnail',
+				//'post-formats',
+				'excerpt',
+				//'news_category'
+			),
+			'taxonomies' => array('post_tag'), // this is IMPORTANT
+			'can_export'   => true,
+		)
+	);
+}
 
-// function add_directors_posts() {
-// 	register_post_type(
-// 		'directors',
-// 		array(
-// 			'labels'       => array(
-// 				'name'               => 'Directors',
-// 				'singular_name'      => 'Director item',
-// 				'add_new'            => 'Add new',
-// 				'add_new_item'       => 'Add new item',
-// 				'edit'               => 'Edit',
-// 				'edit_item'          => 'Edit item',
-// 				'new_item'           => 'New item',
-// 				'view'               => 'View',
-// 				'view_item'          => 'View item',
-// 				'search_items'       => 'Search item',
-// 				'not_found'          => 'Not found',
-// 				'not_found_in_trash' => 'Not find in trash',
-// 			),
-// 			'public'       => true,
-// 			'hierarchical' => true,
-// 			'has_archive'  => true,
-// 			'menu_icon'    => 'dashicons-businessman',
-// 			'supports'     => array(
-// 				'title',
-// 				'editor',
-// 				'thumbnail',
-// 				//'post-formats',
-// 				'excerpt',
-// 				'directors_category'
-// 			),
-// 			'can_export'   => true,
-// 		)
-// 	);
-// }
+add_action( 'init', 'add_news_posts' );
 
-// add_action( 'init', 'add_directors_posts' );
-
-// function my_taxonomies_direcrors_artical() {
+// function news_artical() {
 //     $labels = array(
-//         'name'              => _x( 'Category directors', 'taxonomy general name' ),
+//         'name'              => _x( 'Category news', 'taxonomy general name' ),
 //         'singular_name'     => _x( 'Singular name', 'taxonomy singular name' ),
 //         'search_items'      => __( 'Search items' ),
 //         'all_items'         => __( 'All item' ),
@@ -123,7 +122,7 @@ add_theme_support( 'post-thumbnails' );
 //         'update_item'       => __( 'Update item' ),
 //         'add_new_item'      => __( 'Add new item' ),
 //         'new_item_name'     => __( 'New item name' ),
-//         'menu_name'         => __( 'Directors Category' ),
+//         'menu_name'         => __( 'News Category' ),
 //     );
 //     $args = array(
 //         'labels' => $labels,
@@ -131,10 +130,54 @@ add_theme_support( 'post-thumbnails' );
 //         'show_ui'           => true,
 //         'show_admin_column' => true
 //     );
-//     register_taxonomy( 'directors_category', 'directors', $args );
+//     register_taxonomy( 'news_category', 'news', $args );
 // }
-// add_action( 'init', 'my_taxonomies_direcrors_artical', 0 );
+// add_action( 'init', 'news_artical', 0 );
 
+
+// ====================================================================================================================
+// ===============================================TEAM CUSTOM POST TYPE================================================
+// ====================================================================================================================
+
+function add_team_posts() {
+	register_post_type(
+		'team',
+		array(
+			'labels'       => array(
+				'name'               => 'Team',
+				'singular_name'      => 'Team members',
+				'add_new'            => 'Add new',
+				'add_new_item'       => 'Add new item',
+				'edit'               => 'Edit',
+				'edit_item'          => 'Edit item',
+				'new_item'           => 'New item',
+				'view'               => 'View',
+				'view_item'          => 'View item',
+				'search_items'       => 'Search item',
+				'not_found'          => 'Not found',
+				'not_found_in_trash' => 'Not find in trash',
+			),
+			'public'       => true,
+			'hierarchical' => true,
+			'has_archive'  => true,
+			'menu_icon'    => 'dashicons-groups',
+			'supports'     => array(
+				'title',
+				'editor',
+				'thumbnail',
+				//'post-formats',
+				'excerpt',
+				//'team_category'
+			),
+			//'taxonomies' => array('post_tag'), // this is IMPORTANT
+			'can_export'   => true,
+		)
+	);
+}
+
+add_action( 'init', 'add_team_posts' );
+
+// Comments function
 // function wpb_move_comment_field_to_bottom( $fields ) {
 // 	$comment_field = $fields['comment'];
 // 	unset( $fields['comment'] );
@@ -174,3 +217,19 @@ function my_acf_init() {
 }
 
 add_action( 'acf/init', 'my_acf_init' );
+
+// Query to display search result by tag inside CPT
+
+function cpt_tag_filter( $query ) {
+    if( is_tag() && $query->is_main_query() ) {
+
+        // this gets all post types:
+        $post_types = get_post_types();
+
+        // alternately, you can add just specific post types using this line instead of the above:
+        // $post_types = array( 'post', 'your_custom_type' );
+
+        $query->set( 'post_type', $post_types );
+    }
+}
+add_filter( 'pre_get_posts', 'cpt_tag_filter' );

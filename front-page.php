@@ -15,34 +15,34 @@ global $webshowcase;
 get_header(); ?>
 
 <main id="main">
-	<div class="top-baner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/top-baner.jpg)">
+	<div class="top-baner" style="background-image: url(<?php echo get_field('top_background_image'); ?>)">
 		<div class="container">
 			<div class="top-baner-box">
 				<div class="info">
-					<h1 class="h1">Setting Ourself Apart Through Performance & Determination</h1>
+					<h1 class="h1"><?php echo get_field('top_page_title'); ?></h1>
 					<div class="text-box">
-						<p>Providing investors with solutions in increasingly challenging markets.</p>
+						<p><?php echo get_field('top_page_subtitle'); ?></p>
 					</div>
-					<a href="#" class="default-link">LEARN MORE About our Funds</a>
+					<a href="<?php echo get_field('top_page_link'); ?>" class="default-link"><?php echo get_field('top_page_link_title'); ?></a>
 					<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notice">Launch demo modal</button> -->
 					<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact-modal">Launch demo modal</button> -->
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#download-modal">Launch demo modal</button>
+					<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#download-modal">Launch demo modal</button> -->
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="success-experience">
 		<div class="img bg-img">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/success-img-before.png" alt="">
+			<img src="<?php echo get_field('left_side_image'); ?>" alt="">
 		</div>
 		<div class="container">
 			<div class="row">
 				<div class="right-block col-md-6">
 					<div class="dt">
 						<div class="success-experience--info">
-							<h2>Success Through Experience</h2>
-							<p>Carlisle is a leading, alternative assets investment manager. Our team applies its deep experience and specialized expertise. Carlisle contributes a unique set of attributes that aid in discovering high value and high growth alternative investments that have limited correlation to both traditional and non-traditional asset classes. On top of it, our unique fund management solutions provide a set of institutional investors including pension funds, family offices, endowments, banks and governmental organizations with tailor-made investment structures. We focus on delivering best value, integrity, transparency and responsiveness. </p>
-							<a href="/team" class="default-link">LEARN ABOUT OUR TEAM</a>
+							<h2><?php echo get_field('section_title'); ?></h2>
+							<p><?php echo get_field('section_description'); ?></p>
+							<a href="<?php echo get_field('section_link'); ?>" class="default-link"><?php echo get_field('section_link_title'); ?></a>
 						</div>
 					</div>
 				</div>
@@ -56,50 +56,33 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<h3>Life Insurance Carrier Ratings</h3>
+					<h3><?php echo get_field('left_side_title') ?></h3>
 					<div class="table-block">
+						<?php $t_heads = get_field('table_headings'); ?>
 						<table>
 							<tbody>
 								<tr style="height: 38px;">
-									<th style="height: 38px;">&nbsp;Company</th>
-									<th style="height: 38px;">&nbsp;S&amp;P</th>
-									<th style="height: 38px;">AM BEST</th>
+									<th style="height: 38px;"><?php echo $t_heads['company_title']; ?></th>
+									<th style="height: 38px;"><?php echo $t_heads['s_p_title']; ?></th>
+									<th style="height: 38px;"><?php echo $t_heads['am_best_title']; ?></th>
 								</tr>
-								<tr style="height: 38px;">
-									<td style="height: 38px;">&nbsp;American Gen Life</td>
-									<td style="height: 38px;">&nbsp;A+</td>
-									<td style="height: 38px;">&nbsp;A</td>
-								</tr>
-								<tr style="height: 38px;">
-									<td style="height: 38px;">&nbsp;Assurity Life</td>
-									<td style="height: 38px;">&nbsp;Aa3</td>
-									<td style="height: 38px;">&nbsp;A-</td>
-								</tr>
-								<tr style="height: 38px;">
-									<td style="height: 38px;">&nbsp;AXA Equitable</td>
-									<td style="height: 38px;">&nbsp;AA</td>
-									<td style="height: 38px;">&nbsp;A+</td>
-								</tr>
-								<tr style="height: 38px;">
-									<td style="height: 38px;">&nbsp;Banner Life</td>
-									<td style="height: 38px;">&nbsp;A+</td>
-									<td style="height: 38px;">&nbsp;A+</td>
-								</tr>
-								<tr style="height: 38px;">
-									<td style="height: 38px;">&nbsp;Fidelity Life</td>
-									<td style="height: 38px;">&nbsp;Aa3</td>
-									<td style="height: 38px;">&nbsp;A-</td>
-								</tr>
-								<tr style="height: 38px;">
-									<td style="height: 38px;">&nbsp;Genworth Li</td>
-									<td style="height: 38px;">&nbsp;AA</td>
-									<td style="height: 38px;">&nbsp;A</td>
-								</tr>
-								<tr style="height: 38px;">
-									<td style="height: 38px;">&nbsp;Hancock Life</td>
-									<td style="height: 38px;">&nbsp;AA+</td>
-									<td style="height: 38px;">&nbsp;A+</td>
-								</tr>
+								<?php
+								// check if the repeater field has rows of data
+								if( have_rows('table_rows') ): 
+								 	// loop through the rows of data
+								    while ( have_rows('table_rows') ) : the_row(); ?>
+								        
+									<tr style="height: 38px;">
+										<td style="height: 38px;"><?php the_sub_field('company_name'); ?></td>
+										<td style="height: 38px;"><?php the_sub_field('s_p_index'); ?></td>
+										<td style="height: 38px;"><?php the_sub_field('am_best_index'); ?></td>
+									</tr>
+
+								    <?php endwhile;
+								else :
+								    // no rows found
+								endif;
+								?>
 							</tbody>
 						</table>
 					</div>
@@ -141,45 +124,42 @@ get_header(); ?>
 	<div class="featured-news">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
-					<a href="/news-details">
-						<figure class="item-list">
-							<div class="img bg-img"><img src="<?php echo get_template_directory_uri(); ?>/images/item-1.jpg" alt=""></div>
-							<figcaption class="item-list--info">
-								<div class="text">
-									<p>Luxembourg Life Fund honored with 2018 Investors Choice Award</p>
+				<?php 
+				// query argments
+				$args = array(
+					'post_type' => 'news',
+					'posts_per_page' => 3,
+					'order' => 'DESC',
+					'oredrby' => 'date'
+				);
+
+				$query = new WP_Query( $args );
+
+				if ( $query->have_posts() ) {
+						while ( $query->have_posts() ) 
+							{ $query->the_post(); ?>
+
+								<div class="col-md-4">
+									<a href="<?php echo get_permalink(); ?>">
+										<figure class="item-list">
+											<div class="img bg-img"><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt=""></div>
+											<figcaption class="item-list--info">
+												<div class="text">
+													<p><?php echo get_the_title(); ?></p>
+												</div>
+												<a class="default-link" href="<?php echo get_permalink(); ?>">LEARN MORE</a>
+											</figcaption>
+										</figure>
+									</a>
 								</div>
-								<a class="default-link" href="/news-details">LEARN MORE</a>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="/news-details">
-						<figure class="item-list">
-							<div class="img bg-img"><img src="<?php echo get_template_directory_uri(); ?>/images/item-2.jpg" alt=""></div>
-							<figcaption class="item-list--info">
-								<div class="text">
-									<p>Luxembourg's Carlisle Management Successfully Concludes Large Scale Life Settlements Sale</p>
-								</div>
-								<a class="default-link" href="/news-details">LEARN MORE</a>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="/news-details">
-						<figure class="item-list">
-							<div class="img bg-img"><img src="<?php echo get_template_directory_uri(); ?>/images/item-3.jpg" alt=""></div>
-							<figcaption class="item-list--info">
-								<div class="text">
-									<p>Luxembourg Life Fund honored with 2018 Investors Choice Award</p>
-								</div>
-								<a class="default-link" href="/news-details">LEARN MORE</a>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
+
+							<?php }
+				} else {
+					// Nothing was found
+				}
+				/* Reset query parameters */
+				wp_reset_postdata(); ?>
+
 			</div>
 		</div>
 	</div>		
