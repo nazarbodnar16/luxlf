@@ -30,7 +30,7 @@ $(document).ready(function () {
     
     $('.tab ul.tabs li a').click(function (g) { 
       var tab = $(this).closest('.tab'), 
-        index = $(this).closest('li').index();
+      index = $(this).closest('li').index();
       
       tab.find('ul.tabs > li').removeClass('current');
       $(this).closest('li').addClass('current');
@@ -62,27 +62,27 @@ $(function(){
        // Show the modal
        $('#notice').modal('show');
        $('#myModal').modal({
-    backdrop: 'static',
-    keyboard: false
-})
+        backdrop: 'static',
+        keyboard: false
+      })
        var expiryDate = new Date();
        var hours = 168;
        expiryDate.setTime(expiryDate.getTime() + (hours * 3600 * 1000));
 
        // Create cookie to expire in 168 hours (1 week)
        $.cookie("modalshow", "false", { path: '/', expires: expiryDate });
-    }
-});
+     }
+   });
 
 
 if (document.cookie.indexOf("modalshow=true") < 0) {
-    $('#notice').modal('show');
-    $('#myModal').modal({
+  $('#notice').modal('show');
+  $('#myModal').modal({
     backdrop: 'static',
     keyboard: false
-})
-    var expiryDate = new Date();
-    var hours = 168;
-    expiryDate.setTime(expiryDate.getTime() + (hours * 3600 * 1000));
-    document.cookie = "modalshow=true; expires=" + expiryDate + "; path=/";
+  })
+  var expiryDate = new Date();
+  var hours = 168;
+  expiryDate.setTime(expiryDate.getTime() + (hours * 3600 * 1000));
+  document.cookie = "modalshow=true; expires=" + expiryDate + "; path=/";
 }

@@ -29,6 +29,9 @@ get_header(); ?>
 						<h3 class="clr_orange">headquarters</h3>
 						<p>36, Rue Ste. Zithe, 2763 Luxembourg</p>
 					</div>
+					<div id="g-map">
+						
+					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="contact-box-form">
