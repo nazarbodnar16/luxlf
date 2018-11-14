@@ -54,8 +54,8 @@ function my_assets() {
 	wp_enqueue_script( 'jquery' );
 
 	//Vendor scripts
-	wp_enqueue_script( 'id-vendor-script', get_template_directory_uri() . '/scripts/vendor.min.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'map-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAiTTPATyJxMQbWuSZdnai4qEbM7F2I42o', array(), '1.0.0', true );
+	wp_enqueue_script( 'id-vendor-script', get_template_directory_uri() . '/scripts/vendor.min.js', array(), '1.0.0', true );
 
 	//Custom scripts
 	wp_enqueue_script( 'matchHeight', get_template_directory_uri() . '/development/scripts/jquery.matchHeight-min.js', array(), '1.0.0', true );
