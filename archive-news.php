@@ -61,8 +61,42 @@ get_header(); ?>
 												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
 											</a>
 										</li>
+										<ul class="more-literature-list">
+											<li>
+												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
+													<span class="ico">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
+													</span>
+													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
+												</a>
+											</li>
+											<li>
+												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
+													<span class="ico">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
+													</span>
+													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
+												</a>
+											</li>
+											<li>
+												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
+													<span class="ico">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
+													</span>
+													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
+												</a>
+											</li>
+											<li>
+												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
+													<span class="ico">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
+													</span>
+													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
+												</a>
+											</li>
+										</ul>
 									</ul>
-									<a href="" class="default-link">Monthly Commentary Archives</a>
+									<a href="" class="default-link show-more-literature-list">Monthly Commentary Archives</a>
 								</div>
 							</div>
 						</div>
@@ -108,19 +142,53 @@ get_header(); ?>
 												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
 											</a>
 										</li>
+										<ul class="more-literature-list">
+											<li>
+												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
+													<span class="ico">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
+													</span>
+													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
+												</a>
+											</li>
+											<li>
+												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
+													<span class="ico">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
+													</span>
+													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
+												</a>
+											</li>
+											<li>
+												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
+													<span class="ico">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
+													</span>
+													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
+												</a>
+											</li>
+											<li>
+												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
+													<span class="ico">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
+													</span>
+													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
+												</a>
+											</li>
+										</ul>
 									</ul>
-									<a href="" class="default-link">Monthly Commentary Archives</a>
+									<a href="" class="default-link show-more-literature-list">Monthly Commentary Archives</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div> <!-- / tabs_item -->
 				<div class="tabs_item literature-news-item" style="padding: 0;">
-						<div class="news-head" style="margin-bottom: 40px;">
-							<div class="container">
-								<h2>Our News</h2>
-							</div>
+					<div class="news-head" style="margin-bottom: 40px;">
+						<div class="container">
+							<h2>Our News</h2>
 						</div>
+					</div>
 					<div class="container">
 						<ul class="news-list">
 
@@ -185,4 +253,4 @@ get_header(); ?>
 			</div>
 		</div>
 	</main>
-<?php get_footer(); ?>
+	<?php get_footer(); ?>

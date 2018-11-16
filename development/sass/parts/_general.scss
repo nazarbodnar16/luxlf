@@ -793,6 +793,16 @@
 	margin-bottom: 15px;
 	display: inline-block;
 }
+.literature-tabs{
+	.tabs_item {
+		&:last-child{
+			display: block;
+		}
+		&:first-child{
+			display: none;
+		}
+	}
+}
 .tabs_item {
 	display: none;
 	font: 300 16px/30px $font-montserrat;
@@ -1033,6 +1043,9 @@
 			font-size: 28px;
 		}
 	}
+	.show-more-literature-list:focus{
+		color: $clr_orange;
+	}
 }
 
 .literature-list{
@@ -1064,7 +1077,12 @@
 		}
 	}
 }
-
+.more-literature-list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: none;
+}
 #g-map{
 	height: 590px;
 	max-width: 500px;
