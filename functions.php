@@ -100,7 +100,7 @@ function add_news_posts() {
 				'thumbnail',
 				//'post-formats',
 				'excerpt',
-				//'news_category'
+				'news_category'
 			),
 			'taxonomies' => array('post_tag'), // this is IMPORTANT
 			'can_export'   => true,
@@ -110,29 +110,29 @@ function add_news_posts() {
 
 add_action( 'init', 'add_news_posts' );
 
-// function news_artical() {
-//     $labels = array(
-//         'name'              => _x( 'Category news', 'taxonomy general name' ),
-//         'singular_name'     => _x( 'Singular name', 'taxonomy singular name' ),
-//         'search_items'      => __( 'Search items' ),
-//         'all_items'         => __( 'All item' ),
-//         'parent_item'       => __( 'Parent item' ),
-//         'parent_item_colon' => __( 'Parent item colon' ),
-//         'edit_item'         => __( 'Edit item' ), 
-//         'update_item'       => __( 'Update item' ),
-//         'add_new_item'      => __( 'Add new item' ),
-//         'new_item_name'     => __( 'New item name' ),
-//         'menu_name'         => __( 'News Category' ),
-//     );
-//     $args = array(
-//         'labels' => $labels,
-//         'hierarchical' => true,
-//         'show_ui'           => true,
-//         'show_admin_column' => true
-//     );
-//     register_taxonomy( 'news_category', 'news', $args );
-// }
-// add_action( 'init', 'news_artical', 0 );
+function news_artical() {
+    $labels = array(
+        'name'              => _x( 'Category news', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Singular name', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search items' ),
+        'all_items'         => __( 'All item' ),
+        'parent_item'       => __( 'Parent item' ),
+        'parent_item_colon' => __( 'Parent item colon' ),
+        'edit_item'         => __( 'Edit item' ), 
+        'update_item'       => __( 'Update item' ),
+        'add_new_item'      => __( 'Add new item' ),
+        'new_item_name'     => __( 'New item name' ),
+        'menu_name'         => __( 'News Category' ),
+    );
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+        'show_ui'           => true,
+        'show_admin_column' => true
+    );
+    register_taxonomy( 'news_category', 'news', $args );
+}
+add_action( 'init', 'news_artical', 0 );
 
 
 // ====================================================================================================================

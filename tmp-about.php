@@ -4,26 +4,26 @@ Template Name: About
 */
 get_header(); ?>
 <main>
-	<div class="inner-top-baner about-baner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/about-bg.png">
+	<div class="inner-top-baner about-baner" style="background-image: url(<?php echo get_field('a_top_page_background'); ?>">
 		<div class="container">
 			<div class="top-baner-box">
 				<div class="info">
-					<p>The Luxembourg Life Funds represent a commitment to excellence in customer service that is visible through our work and communications.</p>
+					<p><?php echo get_field('a_top_page_text'); ?></p>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="success-experience">
 		<div class="img bg-img">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/trust-bg.png" alt="">
+			<img src="<?php echo get_field('a_second_section_background'); ?>" alt="Trust image">
 		</div>
 		<div class="container">
 			<div class="row">
 				<div class="right-block col-md-6">
 					<div class="dt">
 						<div class="success-experience--info">
-							<h2>Foundation of Trust</h2>
-							<p>We believe our independence and heritage as a private company has given Carlisle and the Luxembourg Life Fund brand a very strong ethos, based on the enduring values of loyalty and integrity. We see this combination as the bedrock of our brand.</p>
+							<h2><?php echo get_field('a_second_section_right_little'); ?></h2>
+							<p><?php echo get_field('a_second_section_right_description'); ?></p>
 						</div>
 					</div>
 				</div>
@@ -32,15 +32,15 @@ get_header(); ?>
 	</div>
 	<div class="success-experience black-bg mod-black mod-right">
 		<div class="img bg-img">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/experience-bg.png" alt="">
+			<img src="<?php echo get_field('a_third_section_background'); ?>" alt="Image">
 		</div>
 		<div class="container">
 			<div class="row">
 				<div class="right-block col-md-6">
 					<div class="dt">
 						<div class="success-experience--info">
-							<h2>70+ Years of Life Settlement Experience</h2>
-							<p>Carlisle is unusual amongst life settlement companies: we have been in the mortality investment business since its early inception. In our collective memory we have a remarkable range and depth of mortality investing ‘know–how’, based on active participation in the secondary and tertiary life insurance markets. This in return has provided us with a strong network of global contacts, and has allowed us to build on our unrivaled expertise in life settlement providers, brokerages and capital market participants.</p>
+							<h2><?php echo get_field('a_third_section_title'); ?></h2>
+							<p><?php echo get_field('a_third_section_description'); ?></p>
 						</div>
 					</div>
 				</div>
@@ -69,15 +69,15 @@ get_header(); ?>
 	</div>
 	<div class="success-experience">
 		<div class="img bg-img">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/team-bg.png" alt="">
+			<img src="<?php echo get_field('a_fourth_section_background'); ?>" alt="Team image">
 		</div>
 		<div class="container">
 			<div class="row">
 				<div class="right-block col-md-6">
 					<div class="dt">
 						<div class="success-experience--info">
-							<h2>A Team Dedicated to Yout</h2>
-							<p>The Carlisle management team represents the leading talent in life settlements. Over 70 years of combined experience has provided us with a strong network of global contacts, and has allowed us to build on our unrivaled expertise in life settlement providers, brokerages and capital market participants.</p>
+							<h2><?php echo get_field('a_fourth_section_title'); ?></h2>
+							<p><?php echo get_field('a_fourth_section_description'); ?></p>
 						</div>
 					</div>
 				</div>
