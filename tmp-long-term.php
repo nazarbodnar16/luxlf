@@ -8,7 +8,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="top-baner-box">
 				<div class="info white-bg-padding">
-					<p>Privacy Policy</p>
+					<p>Long Term Growth Fund</p>
 				</div>
 			</div>
 		</div>
