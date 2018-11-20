@@ -103,5 +103,12 @@ if (document.cookie.indexOf("modalshow=true") < 0) {
 }
 
 $('.download-pdf').click(function(e){
+  var link = $(this).parents('.news-list--item').find('.download-file');
   e.preventDefault();
+  $(".wpcf7").on('wpcf7:mailsent', function(event){
+    e.preventDefault();
+  link.attr('target', "_blank");
+  });
 });
+
+

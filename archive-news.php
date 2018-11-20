@@ -106,6 +106,7 @@ get_header(); ?>
 					<div class="container">
 						<ul class="news-list">
 							<li class="news-list--item">
+								<a  class="download-file" href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download></a>
 								<a class="clearfix" href="#">
 									<span class="news-text">
 										<h3>Providers Vital Points of Reference</h3>
