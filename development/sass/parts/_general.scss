@@ -1087,3 +1087,22 @@
 	height: 590px;
 	max-width: 500px;
 }
+
+.pappers_item .download-pdf{
+	float: right;
+}
+.pappers_item .news-list--item a{
+	display: block;
+	max-width: 800px;
+	.news-text{
+		padding-right: 55px;
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 587px;
+	}
+	.download-pdf{
+		display: inline-block;
+		vertical-align: middle;
+		float: none;
+	}
+}

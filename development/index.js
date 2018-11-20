@@ -101,3 +101,7 @@ if (document.cookie.indexOf("modalshow=true") < 0) {
   expiryDate.setTime(expiryDate.getTime() + (hours * 3600 * 1000));
   document.cookie = "modalshow=true; expires=" + expiryDate + "; path=/";
 }
+
+$('.download-pdf').click(function(e){
+  e.preventDefault();
+});
