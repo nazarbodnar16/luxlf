@@ -1,5 +1,11 @@
 
 $(document).ready(function () {
+  $('.wpcf7-list-item-label').click(function(e){
+    var corrChkbx = jQuery(this).prev('input[type="checkbox"]'),
+        checkedVal = corrChkbx.prop('checked');
+        corrChkbx.prop('checked', !checkedVal);
+});
+
   $('.bg-img').each(function() {
     $(this).css('background-image', 'url(' + $(this).find('> img').attr('src') + ')').find('> img').hide();
   });
@@ -110,5 +116,3 @@ $('.download-pdf').click(function(e){
   link.attr('target', "_blank");
   });
 });
-
-

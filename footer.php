@@ -24,7 +24,7 @@
                 <div class="col-md-6 col-sm-12 clearfix">
                     <nav class="footer-nav">
                         <?php wp_nav_menu(array('container' => false, 'items_wrap' => '<ul id="%1$s">%3$s</ul>', 'theme_location'  => 'footer_menu_bottom')); ?>
-                        <span class="by">by Ai</span>
+                        <a href="https://www.allianceinteractive.com/" target="blank" class="by">by Ai</a>
                     </nav>
                 </div>  
             </div>

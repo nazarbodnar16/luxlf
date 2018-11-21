@@ -7,7 +7,7 @@ get_header(); ?>
 	<div class="inner-top-baner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/contact-us-bg.png">
 		<div class="container">
 			<div class="top-baner-box">
-				<div class="info">
+				<div class="info white-bg-padding">
 					<p>Tap into Carlisle's wealth of experiencey</p>
 				</div>
 			</div>

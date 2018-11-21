@@ -117,7 +117,7 @@
 	&--info{
 		display: table-cell;
 		vertical-align: middle;
-		font: 300 16px/20px $font-montserrat;
+		font: 300 16px/26px $font-montserrat;
 		padding: 50px 0 50px 25px;
 		@media (max-width: 768px){
 			height: auto;
@@ -356,8 +356,7 @@
 	padding: 55px 0;
 	font: 400 24px/36px $font-gilda;
 	.team-info-descr{
-		font-size: 16px;
-		line-height: 30px;
+		font: 300 16px/30px $font-montserrat;
 	}
 }
 .team-list{
@@ -411,7 +410,7 @@
 		font: 400 40px/43px $font-gilda;
 		margin-bottom: 10px;
 	}
-	.possition{
+	.position{
 		font: 400 14px/14px $font-montserrat;
 		display: block;
 		float: left;
@@ -452,7 +451,7 @@
 
 .policy{
 	padding: 60px 0;
-	font-weight: 300;
+    font: 300 16px/20px "Montserrat",sans-serif;
 	letter-spacing:0;
 	p{
 		margin-bottom: 25px;
@@ -900,6 +899,12 @@
 .contact-form{
 	background: #f0f0f0;
 	padding: 40px 30px;
+	br{
+		display: none;
+	}
+	span.wpcf7-list-item{
+		margin: 0;
+	}
 	.form-control{
 		background: $clr_white;
 		font: 700 14px/24px $font-montserrat;
@@ -925,19 +930,24 @@
 			line-height: 24px;
 		}
 	}
+	.wpcf7-textarea{
+		resize: none;
+		height: 100px;
+		line-height: 24px;
+	}
 	[type="checkbox"] {
 		&:checked, &:not(:checked) {
 			position: absolute;
 			left: -9999px;
 		}
-		&:checked + label, &:not(:checked) + label {
+		&:checked + span, &:not(:checked) + span {
 			position: relative;
 			padding-left: 28px;
 			cursor: pointer;
 			display: inline-block;
 			font: 300 14px/20px $font-montserrat;
 		}
-		&:checked + label:before, &:not(:checked) + label:before {
+		&:checked + span:before, &:not(:checked) + span:before {
 			content: '';
 			position: absolute;
 			left: 0;
@@ -947,7 +957,7 @@
 			border: 1px solid #ddd;
 			background: #fff;
 		}
-		&:checked + label:after {
+		&:checked + span:after {
 			content: '';
 			width: 8px;
 			height: 8px;
@@ -960,7 +970,7 @@
 			-o-transition: all 0.2s ease;
 			transition: all 0.2s ease;
 		}
-		&:not(:checked) + label:after {
+		&:not(:checked) + span:after {
 			content: '';
 			width: 8px;
 			height: 8px;

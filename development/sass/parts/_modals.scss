@@ -245,7 +245,11 @@
 
 #download-modal{
 	.modal-dialog{
-		margin: 30px auto;
+		margin: 30px 0;
+		top: 50%;
+		left: 50%;
+    	transform: translate(-50%, -50%);
+    	height: 100vh;
 		.modal-content{
 			.modal-header{
 				border: none;
@@ -290,4 +294,8 @@
 			}
 		}
 	}
+}
+
+.modal-backdrop {
+   background: rgba(0, 0, 0, .6);
 }

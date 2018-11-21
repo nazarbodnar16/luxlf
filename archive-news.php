@@ -30,70 +30,78 @@ get_header(); ?>
 									<h3>Long Term Growth Fund</h3>
 									<ul class="literature-list">
 										<li>
-											<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
+											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
 												<span class="ico">
 													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
 												</span>
 												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
 											</a>
+											<a class="download-link_truee" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
 										</li>
 										<li>
-											<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
+											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
 												<span class="ico">
 													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
 												</span>
 												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
 											</a>
+											<a class="download-link_true" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
 										</li>
 										<li>
-											<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
+											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
 												<span class="ico">
 													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
 												</span>
 												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
 											</a>
+											<a class="download-link_true" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
 										</li>
 										<li>
-											<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
+											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
 												<span class="ico">
 													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
 												</span>
 												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
 											</a>
+											<a class="download-link_true" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
 										</li>
 										<ul class="more-literature-list">
 											<li>
-												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
-													<span class="ico">
-														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-													</span>
-													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-												</a>
-											</li>
+											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
+												<span class="ico">
+													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
+												</span>
+												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
+											</a>
+											<a class="download-link_true" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
+										</li>
 											<li>
-												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
-													<span class="ico">
-														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-													</span>
-													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-												</a>
-											</li>
+											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
+												<span class="ico">
+													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
+												</span>
+												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
+											</a>
+											<a class="download-link_true" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
+										</li>
 											<li>
-												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
-													<span class="ico">
-														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-													</span>
-													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-												</a>
-											</li>
+											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
+												<span class="ico">
+													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
+												</span>
+												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
+											</a>
+											<a class="download-link_true" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
+										</li>
 											<li>
-												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
-													<span class="ico">
-														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-													</span>
-													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-												</a>
-											</li>
+											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
+												<span class="ico">
+													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
+												</span>
+												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
+											</a>
+											<a class="download-link_true" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
+										</li>
 										</ul>
 									</ul>
 									<a href="" class="default-link show-more-literature-list">Monthly Commentary Archives</a>
