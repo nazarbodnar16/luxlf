@@ -113,7 +113,7 @@
     </div>
     <div class="modal-body">
         <div class="contact-box-form">
-            <!-- <div class="contact-form">
+<!--             <div class="contact-form">
                 <form action="">
                     <input class="form-control" type="text" placeholder="FULL NAME">
                     <input class="form-control" type="text" placeholder="BUSINESS">
@@ -130,8 +130,10 @@
                     <label for="test2">Subscribe to News & Updates</label>
                 </div>
                 <input class="default-btn submit-btn" type="submit" value="submit">
-            </div> -->
-            <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
+            </div>  -->           
+        </div>
+        <div class="contact-form">
+            <?php echo do_shortcode('[contact-form-7 id="6" title="Download Form" html_id="download-form" html_class="download-form use-floating-validation-tip"]'); ?>
         </div>
     </div>
 </div>

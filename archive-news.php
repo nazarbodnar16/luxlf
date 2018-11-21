@@ -107,20 +107,22 @@ get_header(); ?>
 						<ul class="news-list">
 							<li class="news-list--item">
 								<a  class="download-file" href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download></a>
-								<a class="clearfix" href="#">
+								<a class="clearfix second-download" data-attr="some-download-1" href="javascript:void(0)" >
 									<span class="news-text">
 										<h3>Providers Vital Points of Reference</h3>
 										<span class="text-block">
 											<p>As any industry grows from infancy to maturity, there are a number of milestones that usually take place in this natural progression. </p>
 										</span>
 									</span>
-									<span class="default-btn download-pdf" data-toggle="modal" data-target="#download-modal">
-										download now
+									<span class="default-btn download-pdf" data-attr="some-download-1" data-toggle="modal" data-target="#download-modal">
+										download now										
 									</span>
+
 								</a>
+								<a class="download-link_true" data-attr="some-download-1" href="https://link1.com"></a>
 							</li>
 							<li class="news-list--item">
-								<a class="clearfix" href="#">
+								<a class="clearfix second-download" data-attr="some-download-2" href="javascript:void(0)">
 									<span class="news-text">
 										<h3>How to Select a Life Settlement Fund</h3>
 										<span class="text-block">
@@ -131,9 +133,10 @@ get_header(); ?>
 										download now
 									</span>
 								</a>
+								<a class="download-link_true" data-attr="some-download-2" href="https://link2.com"></a>
 							</li>
 							<li class="news-list--item">
-								<a class="clearfix" href="#">
+								<a class="clearfix second-download" data-attr="some-download-3" href="javascript:void(0)">
 									<span class="news-text">
 										<h3>Tax Implications of Life Settlements</h3>
 										<span class="text-block">
@@ -141,9 +144,10 @@ get_header(); ?>
 										</span>
 									</span>
 									<span class="default-btn download-pdf" data-toggle="modal" data-target="#download-modal">
-										download now
+										download now										
 									</span>
 								</a>
+								<a class="download-link_true" data-attr="some-download-3" href="https://link3.com"></a>
 							</li>
 						</ul>
 					</div>
@@ -219,3 +223,4 @@ get_header(); ?>
 		</div>
 	</main>
 	<?php get_footer(); ?>
+

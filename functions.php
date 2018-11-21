@@ -61,6 +61,15 @@ function my_assets() {
 	wp_enqueue_script( 'matchHeight', get_template_directory_uri() . '/development/scripts/jquery.matchHeight-min.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'id-custom-script', get_template_directory_uri() . '/scripts/index.min.js', array(), '1.0.0', true );
 
+	if(is_post_type_archive( 'news' )){
+		wp_enqueue_script( 'download-script', get_template_directory_uri() . '/scripts/download.js', array(), '1.0.0', true );
+
+	};
+
+	if(is_tag()){
+		wp_enqueue_script( 'download-script', get_template_directory_uri() . '/scripts/download.js', array(), '1.0.0', true );
+	};
+
 }
 
 add_action( 'wp_enqueue_scripts', 'my_assets' );
@@ -233,3 +242,9 @@ function cpt_tag_filter( $query ) {
     }
 }
 add_filter( 'pre_get_posts', 'cpt_tag_filter' );
+
+// add_filter('wpcf7_form_elements', function($content) {
+//     $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+
+//     return $content;
+// });
