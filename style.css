@@ -18,3 +18,24 @@ span.descr .possition {
 span.date {
     text-transform: uppercase;
 }
+.wpcf7-form-control-wrap{
+	display: block;
+}
+.use-floating-validation-tip span.wpcf7-not-valid-tip {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index: 100;
+    border: 1px solid #ff0000;
+    background: #fff;
+    padding: .2em .8em;
+    bottom: 0;
+    right: 0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
