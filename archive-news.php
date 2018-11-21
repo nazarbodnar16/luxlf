@@ -107,43 +107,42 @@ get_header(); ?>
 						<ul class="news-list">
 							<li class="news-list--item">
 								<a  class="download-file" href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download></a>
-								<a class="clearfix second-download" data-attr="some-download-1" href="javascript:void(0)" >
+								<a class="clearfix second-download" data-attr="some-download-1" data-toggle="modal" data-cookie-target="#download-modal">
 									<span class="news-text">
 										<h3>Providers Vital Points of Reference</h3>
 										<span class="text-block">
 											<p>As any industry grows from infancy to maturity, there are a number of milestones that usually take place in this natural progression. </p>
 										</span>
 									</span>
-									<span class="default-btn download-pdf" data-attr="some-download-1" data-toggle="modal" data-target="#download-modal">
+									<span class="default-btn download-pdf" data-attr="some-download-1" >
 										download now										
 									</span>
-
 								</a>
 								<a class="download-link_true" data-attr="some-download-1" href="https://link1.com"></a>
 							</li>
 							<li class="news-list--item">
-								<a class="clearfix second-download" data-attr="some-download-2" href="javascript:void(0)">
+								<a class="clearfix second-download"  data-attr="some-download-2" data-toggle="modal" data-cookie-target="#download-modal">
 									<span class="news-text">
 										<h3>How to Select a Life Settlement Fund</h3>
 										<span class="text-block">
 											<p>How to Select a Life Settlement Fund – by Jose Garcia, Carlisle Management Company CEO.</p>
 										</span>
 									</span>
-									<span class="default-btn download-pdf" data-toggle="modal" data-target="#download-modal">
+									<span class="default-btn download-pdf" data-target="#download-modal">
 										download now
 									</span>
 								</a>
 								<a class="download-link_true" data-attr="some-download-2" href="https://link2.com"></a>
 							</li>
 							<li class="news-list--item">
-								<a class="clearfix second-download" data-attr="some-download-3" href="javascript:void(0)">
+								<a class="clearfix second-download" data-attr="some-download-3" data-toggle="modal" data-cookie-target="#download-modal">
 									<span class="news-text">
 										<h3>Tax Implications of Life Settlements</h3>
 										<span class="text-block">
 											<p>May first of 2009, the Internal Revenue Service issued two Revenue Rulings that constitute the official position of the IRS on certain key...</p>
 										</span>
 									</span>
-									<span class="default-btn download-pdf" data-toggle="modal" data-target="#download-modal">
+									<span class="default-btn download-pdf" data-target="#download-modal">
 										download now										
 									</span>
 								</a>
