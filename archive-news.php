@@ -105,49 +105,36 @@ get_header(); ?>
 				<div class="tabs_item pappers_item">
 					<div class="container">
 						<ul class="news-list">
-							<li class="news-list--item">
-								<a  class="download-file" href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download></a>
-								<a class="clearfix second-download" data-attr="some-download-1" data-toggle="modal" data-cookie-target="#download-modal">
-									<span class="news-text">
-										<h3>Providers Vital Points of Reference</h3>
-										<span class="text-block">
-											<p>As any industry grows from infancy to maturity, there are a number of milestones that usually take place in this natural progression. </p>
-										</span>
-									</span>
-									<span class="default-btn download-pdf" data-attr="some-download-1" >
-										download now										
-									</span>
-								</a>
-								<a class="download-link_true" data-attr="some-download-1" href="https://link1.com"></a>
-							</li>
-							<li class="news-list--item">
-								<a class="clearfix second-download"  data-attr="some-download-2" data-toggle="modal" data-cookie-target="#download-modal">
-									<span class="news-text">
-										<h3>How to Select a Life Settlement Fund</h3>
-										<span class="text-block">
-											<p>How to Select a Life Settlement Fund – by Jose Garcia, Carlisle Management Company CEO.</p>
-										</span>
-									</span>
-									<span class="default-btn download-pdf" data-target="#download-modal">
-										download now
-									</span>
-								</a>
-								<a class="download-link_true" data-attr="some-download-2" href="https://link2.com"></a>
-							</li>
-							<li class="news-list--item">
-								<a class="clearfix second-download" data-attr="some-download-3" data-toggle="modal" data-cookie-target="#download-modal">
-									<span class="news-text">
-										<h3>Tax Implications of Life Settlements</h3>
-										<span class="text-block">
-											<p>May first of 2009, the Internal Revenue Service issued two Revenue Rulings that constitute the official position of the IRS on certain key...</p>
-										</span>
-									</span>
-									<span class="default-btn download-pdf" data-target="#download-modal">
-										download now										
-									</span>
-								</a>
-								<a class="download-link_true" data-attr="some-download-3" href="https://link3.com"></a>
-							</li>
+
+							<?php
+							$count = 1;
+							// check if the repeater field has rows of data
+							if( have_rows('whitepapers_items', 'option') ):
+							 	// loop through the rows of data
+							    while ( have_rows('whitepapers_items', 'option') ) : the_row(); ?>    
+							    
+									<li class="news-list--item">
+										<a class="clearfix second-download"  data-attr="element-download-<?php echo $count; ?>" data-toggle="modal" data-cookie-target="#download-modal">
+											<span class="news-text">
+												<h3><?php the_sub_field('item_title'); ?></h3>
+												<span class="text-block">
+													<p><?php the_sub_field('item_teaser'); ?></p>
+												</span>
+											</span>
+											<span class="default-btn download-pdf">
+												download now
+											</span>
+										</a>
+										<a class="download-link_true" data-attr="element-download-<?php echo $count; ?>" href="<?php the_sub_field('download_file'); ?>"></a>
+									</li>
+
+							    <?php $count++;
+							    endwhile;
+							else :
+							    // no rows found
+							endif;
+							?>
+
 						</ul>
 					</div>
 				</div> <!-- / tabs_item -->
@@ -210,12 +197,7 @@ get_header(); ?>
 						</div>
 					</div>
 					<div class="col-md-6">
-						<div class="subscribe-form">
-							<form action="">
-								<input class="form-control" type="text" placeholder="email address">
-								<input class="submit-btn default-btn" type="submit" value="subscribe">
-							</form>
-						</div>
+						<?php echo do_shortcode('[mc4wp_form id="239"]'); ?>
 					</div>
 				</div>
 			</div>

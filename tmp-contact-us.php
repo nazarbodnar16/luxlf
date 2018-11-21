@@ -37,24 +37,9 @@ get_header(); ?>
 					<div class="contact-box-form">
 						<p>For all fund related enquiries please use the contact form below or email us at: <a class="clr_orange" href="mailto:info@cmclux.com">info@cmclux.com</a></p>
 						<div class="contact-form">
-							<form action="">
-								<input class="form-control" type="text" placeholder="First Name">
-								<input class="form-control" type="text" placeholder="LAST Name">
-								<input class="form-control" type="text" placeholder="Email">
-								<input class="form-control" type="text" placeholder="Telephone">
-								<input class="form-control" type="text" placeholder="Type of Inquiry">
-								<textarea class="form-control textarea" name="" id="" placeholder="Comments"></textarea>
-							</form>
-							<span>
-								<input type="checkbox" id="test1"  checked="checked" />
-								<label for="test1">Request Funds Overview</label>
-							</span>
-							<div>
-								<input type="checkbox" id="test2" />
-								<label for="test2">Subscribe to News & Updates</label>
-							</div>
-							<input class="default-btn submit-btn" type="submit" value="submit">
+							<?php echo do_shortcode('[contact-form-7 id="242" title="Contact form contact us page" html_class="use-floating-validation-tip"]'); ?>
 						</div>
+
 						<p>The personal information we collect is used for the purpose for which it was provided to us. We endeavor to keep your personal information  with appropriate level of security and will keep it on record for as long as we need for legitimate business or legal reasons. We will then delete it safely and securely.</p>
 						<p>For more information about how Luxembourg Life Fund site processes your personal data, please view our <a class="clr_orange " href="">privacy statement.</a></p>
 					</div>

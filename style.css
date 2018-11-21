@@ -39,3 +39,14 @@ span.date {
 	-ms-align-items: center;
 	align-items: center;
 }
+.row.thank-you {
+    display: flex;
+    justify-content: center;
+}
+.row.thank-you h1{
+    font-size:7rem;
+    font-weight:600;
+}
+.subscribe-form {
+    display: flex;
+}
