@@ -6,24 +6,39 @@
 			<h1><?php echo get_the_title(); ?></h1>
 			<span class="date"><?php echo get_the_date('j F, Y') ?></span>
 			<div class="img bg-img">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/news-detail.jpg" alt="">
+				<img src="<?php echo get_field('news_top_image'); ?>" alt="<?php echo get_the_title(); ?>">
 			</div>
 			<div class="row">
 				<div class="col-md-9">
-					<p>We are pleased to report that Carlisle Management Company has been awarded two distinctions by Acquisition International in their recently announced 2015 Hedge Fund Awards.  Along with being voted “Best Fund Manager – Luxembourg”, Carlisle also received the award for “Best European Long Term Growth Fund” for its open ended life settlement fund, the Luxembourg Life Fund.</p>
-					<p>We are pleased to report that Carlisle Management Company has been awarded two distinctions by Acquisition International in their recently announced 2015 Hedge Fund Awards.  Along with being voted “Best Fund Manager – Luxembourg”, Carlisle also received the award for “Best European Long Term Growth Fund” for its open ended life settlement fund, the Luxembourg Life Fund.</p>
-					<div class="news-blockquote">
-						<blockquote>
-							The Acquisition International Hedge Fund Awards were created to highlight excellence, best practice and innovation across the asset class, and to win one of these prestigious awards is truly a stamp of business excellence, integrity and leadership.
-						</blockquote>
-						<div class="by">
-							<strong>Siobhan Hanley</strong>
-							<span>Acquisition International</span>
-						</div>
-					</div>
-					<p>Now in their third year, “the Acquisition International Hedge Fund Awards were created to highlight excellence, best practice and innovation across the asset class, and to win one of these prestigious awards is truly a stamp of business excellence, integrity and leadership.”, Acquisition International’s  Siobhan Hanley stated in a letter to Carlisle Management Company.</p>
-					<p>“It’s not easy to determine the winners in these immensely popular global awards. We receive literally thousands of nominations from industry experts, clients and peers and spend months gathering votes, painstakingly researching all nominees and collating all relevant information so that we can fairly and accurately determine our worthy winners.”, further wrote Hanley. “Competition is stiff and our vetting process is as rigorous as they come but it’s the only way we can safely guarantee that every single one of our winners is 100% deserving and can truly lay claim to being one of their industry’s leading lights.”</p>
-					<p>Voting for these coveted awards ranges from fund managers and family offices to sovereign wealth funds and endowments, spanning across all continents of the globe. They combine the votes received – alongside supporting evidence – with their own in-house research to arrive at the final winners list. Acquisition International’s dedicated research team has more than two decades of experience in financial reporting and corporate communications.</p>
+
+					<?php
+
+					// check if the flexible content field has rows of data
+					if( have_rows('news_content') ):
+					     // loop through the rows of data
+					    while ( have_rows('news_content') ) : the_row();
+					        if( get_row_layout() == 'common_paragraph' ):
+					        	the_sub_field('paragraph');
+					        elseif( get_row_layout() == 'quote_section' ): ?>
+
+								<div class="news-blockquote">
+									<blockquote>
+										<?php the_sub_field('quote_text'); ?>
+									</blockquote>
+									<div class="by">
+										<strong><?php the_sub_field('person'); ?></strong>
+										<span><?php the_sub_field('position'); ?></span>
+									</div>
+								</div>
+
+					    <?php endif;
+					    endwhile;
+					else :
+					    // no layouts found
+					endif;
+
+					?>
+
 				</div>
 				<div class="col-md-3">
 					<div class="tag-box">
@@ -46,12 +61,7 @@
 					</div>
 				</div>
 				<div class="col-md-6">
-					<div class="subscribe-form">
-						<form action="">
-							<input class="form-control" type="text" placeholder="email address">
-							<input class="submit-btn default-btn" type="submit" value="subscribe">
-						</form>
-					</div>
+					<?php echo do_shortcode('[mc4wp_form id="239"]'); ?>
 				</div>
 			</div>
 		</div>
