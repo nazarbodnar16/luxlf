@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php 
+$count = 1;
+get_header(); ?>
 
 <main>
 	<div class="inner-top-baner literature-baner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/literature-bg.png">
@@ -28,72 +30,30 @@
 									<h2>PENLIFA LX</h2>
 									<h3>Long Term Growth Fund</h3>
 									<ul class="literature-list">
-										<li>
-											<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
-												<span class="ico">
-													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-												</span>
-												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-											</a>
-										</li>
-										<li>
-											<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
-												<span class="ico">
-													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-												</span>
-												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-											</a>
-										</li>
-										<li>
-											<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
-												<span class="ico">
-													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-												</span>
-												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-											</a>
-										</li>
-										<li>
-											<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
-												<span class="ico">
-													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-												</span>
-												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-											</a>
-										</li>
-										<ul class="more-literature-list">
-											<li>
-												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
+
+										<?php
+										// check if the repeater field has rows of data
+										if( have_rows('literature_items', 'option') ):
+										 	// loop through the rows of data
+										    while ( have_rows('literature_items', 'option') ) : the_row(); ?>
+										        
+										    <li>
+												<a class="lit-dload" data-attr="lit-el-dload-<?php echo $count; ?>" data-toggle="modal" data-cookie-target="#download-modal">
 													<span class="ico">
 														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
 													</span>
-													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
+													<span class="link-text"><?php the_sub_field('item_title'); ?></span>
 												</a>
+												<a class="lit-dlink-true" data-attr="lit-el-dload-<?php echo $count; ?>" href="<?php the_sub_field('file_upload'); ?>"></a>
 											</li>
-											<li>
-												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
-													<span class="ico">
-														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-													</span>
-													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-												</a>
-											</li>
-											<li>
-												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
-													<span class="ico">
-														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-													</span>
-													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-												</a>
-											</li>
-											<li>
-												<a href="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" download>
-													<span class="ico">
-														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-													</span>
-													<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-												</a>
-											</li>
-										</ul>
+
+										<?php $count++;
+										endwhile;
+										else :
+										    // no rows found
+										endif;
+										?>
+
 									</ul>
 									<a href="" class="default-link show-more-literature-list">Monthly Commentary Archives</a>
 								</div>
@@ -104,45 +64,36 @@
 				<div class="tabs_item pappers_item">
 					<div class="container">
 						<ul class="news-list">
-							<li class="news-list--item">
-								<a class="clearfix" href="#">
-									<span class="news-text">
-										<h3>Providers Vital Points of Reference</h3>
-										<span class="text-block">
-											<p>As any industry grows from infancy to maturity, there are a number of milestones that usually take place in this natural progression. </p>
-										</span>
-									</span>
-									<span class="default-btn download-pdf" data-toggle="modal" data-target="#download-modal">
-										download now
-									</span>
-								</a>
-							</li>
-							<li class="news-list--item">
-								<a class="clearfix" href="#">
-									<span class="news-text">
-										<h3>How to Select a Life Settlement Fund</h3>
-										<span class="text-block">
-											<p>How to Select a Life Settlement Fund – by Jose Garcia, Carlisle Management Company CEO.</p>
-										</span>
-									</span>
-									<span class="default-btn download-pdf" data-toggle="modal" data-target="#download-modal">
-										download now
-									</span>
-								</a>
-							</li>
-							<li class="news-list--item">
-								<a class="clearfix" href="#">
-									<span class="news-text">
-										<h3>Tax Implications of Life Settlements</h3>
-										<span class="text-block">
-											<p>May first of 2009, the Internal Revenue Service issued two Revenue Rulings that constitute the official position of the IRS on certain key...</p>
-										</span>
-									</span>
-									<span class="default-btn download-pdf" data-toggle="modal" data-target="#download-modal">
-										download now
-									</span>
-								</a>
-							</li>
+
+							<?php
+							
+							// check if the repeater field has rows of data
+							if( have_rows('whitepapers_items', 'option') ):
+							 	// loop through the rows of data
+							    while ( have_rows('whitepapers_items', 'option') ) : the_row(); ?>    
+							    
+									<li class="news-list--item">
+										<a class="clearfix second-download"  data-attr="element-download-<?php echo $count; ?>" data-toggle="modal" data-cookie-target="#download-modal">
+											<span class="news-text">
+												<h3><?php the_sub_field('item_title'); ?></h3>
+												<span class="text-block">
+													<p><?php the_sub_field('item_teaser'); ?></p>
+												</span>
+											</span>
+											<span class="default-btn download-pdf">
+												download now
+											</span>
+										</a>
+										<a class="download-link_true" data-attr="element-download-<?php echo $count; ?>" href="<?php the_sub_field('download_file'); ?>"></a>
+									</li>
+
+							    <?php $count++;
+							    endwhile;
+							else :
+							    // no rows found
+							endif;
+							?>
+
 						</ul>
 					</div>
 				</div> <!-- / tabs_item -->
