@@ -5,11 +5,11 @@ Template Name: Our Funds
 get_header(); ?>
 <?php $fund_c = get_field('funds_content'); ?>
 <main>
-	<div class="inner-top-baner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/long-term.png">
+	<div class="inner-top-baner" style="background-image: url(<?php echo get_field('of_top_page_background'); ?>">
 		<div class="container">
 			<div class="top-baner-box">
 				<div class="info white-bg-padding">
-					<p>Long Term Growth Fund</p>
+					<p><?php echo get_field('of_page_title'); ?></p>
 				</div>
 			</div>
 		</div>

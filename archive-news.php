@@ -4,11 +4,11 @@ get_header();
 $count = 1;
 ?>
 <main>
-	<div class="inner-top-baner literature-baner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/literature-bg.png">
+	<div class="inner-top-baner literature-baner" style="background-image: url(<?php echo get_field('arch_n_top_page_background', 'cpt_news'); ?>">
 		<div class="container">
 			<div class="top-baner-box">
 				<div class="info white-bg-padding">
-					<p>Literature and News</p>
+					<p><?php echo get_field('arch_n_top_page_title', 'cpt_news'); ?></p>
 				</div>
 			</div>
 		</div>
