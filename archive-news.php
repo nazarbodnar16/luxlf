@@ -1,6 +1,8 @@
 <?php
 
-get_header(); ?>
+get_header(); 
+$count = 1;
+?>
 <main>
 	<div class="inner-top-baner literature-baner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/literature-bg.png">
 		<div class="container">
@@ -29,80 +31,30 @@ get_header(); ?>
 									<h2>PENLIFA LX</h2>
 									<h3>Long Term Growth Fund</h3>
 									<ul class="literature-list">
-										<li>
-											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
-												<span class="ico">
-													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-												</span>
-												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-											</a>
-											<a class="download-link_truee" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
-										</li>
-										<li>
-											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
-												<span class="ico">
-													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-												</span>
-												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-											</a>
-											<a class="download-link_true" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
-										</li>
-										<li>
-											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
-												<span class="ico">
-													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-												</span>
-												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-											</a>
-											<a class="download-link_true" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
-										</li>
-										<li>
-											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
-												<span class="ico">
-													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-												</span>
-												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-											</a>
-											<a class="download-link_true" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
-										</li>
-										<ul class="more-literature-list">
-											<li>
-											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
-												<span class="ico">
-													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-												</span>
-												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-											</a>
-											<a class="download-link_true" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
-										</li>
-											<li>
-											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
-												<span class="ico">
-													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-												</span>
-												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-											</a>
-											<a class="download-link_true" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
-										</li>
-											<li>
-											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
-												<span class="ico">
-													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-												</span>
-												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-											</a>
-											<a class="download-link_true" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
-										</li>
-											<li>
-											<a data-attr="element-download-1" data-toggle="modal" data-cookie-target="#download-modal">
-												<span class="ico">
-													<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
-												</span>
-												<span class="link-text">Monthly Fact Sheet (08/31/18)</span>
-											</a>
-											<a class="download-link_true" data-attr="element-download-1" href="http://lulf/wp-content/uploads/2018/11/pdf.pdf"></a>
-										</li>
-										</ul>
+
+										<?php
+										// check if the repeater field has rows of data
+										if( have_rows('literature_items', 'option') ):
+										 	// loop through the rows of data
+										    while ( have_rows('literature_items', 'option') ) : the_row(); ?>
+										        
+										    <li>
+												<a class="lit-dload" data-attr="lit-el-dload-<?php echo $count; ?>" data-toggle="modal" data-cookie-target="#download-modal">
+													<span class="ico">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
+													</span>
+													<span class="link-text"><?php the_sub_field('item_title'); ?></span>
+												</a>
+												<a class="lit-dlink-true" data-attr="lit-el-dload-<?php echo $count; ?>" href="<?php the_sub_field('file_upload'); ?>"></a>
+											</li>
+
+										<?php $count++;
+										endwhile;
+										else :
+										    // no rows found
+										endif;
+										?>
+
 									</ul>
 									<a href="" class="default-link show-more-literature-list">Monthly Commentary Archives</a>
 								</div>
@@ -115,7 +67,7 @@ get_header(); ?>
 						<ul class="news-list">
 
 							<?php
-							$count = 1;
+							
 							// check if the repeater field has rows of data
 							if( have_rows('whitepapers_items', 'option') ):
 							 	// loop through the rows of data
