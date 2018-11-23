@@ -29,15 +29,16 @@ get_header(); ?>
 				<div class="col-md-6">
 					<div class="contact-text">
 						<h2>Contact Us</h2>
-						<p>We offer unique options to a diverse range of investors.</p>
+						<p>Tap into our wealth of experience and expertise. The conversation starts with you.</p>
 					</div>
-				</div>
-				<div class="col-md-6">
 					<div class="contact-btn">
-						<a class="default-btn" href="" data-toggle="modal" data-target="#contact-modal">contact us</a>
+						<a class="default-btn" href="" data-toggle="modal" data-target="#contact-modal">info@cmclux.com</a>
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="contact-img-after bg-img">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/contact-after.png" alt="">
 		</div>
 	</div>
 </main>
