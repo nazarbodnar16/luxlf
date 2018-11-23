@@ -2,9 +2,9 @@
 $(document).ready(function () {
   $('.wpcf7-list-item-label').click(function(e){
     var corrChkbx = jQuery(this).prev('input[type="checkbox"]'),
-        checkedVal = corrChkbx.prop('checked');
-        corrChkbx.prop('checked', !checkedVal);
-});
+    checkedVal = corrChkbx.prop('checked');
+    corrChkbx.prop('checked', !checkedVal);
+  });
 
   $('.bg-img').each(function() {
     $(this).css('background-image', 'url(' + $(this).find('> img').attr('src') + ')').find('> img').hide();
@@ -50,7 +50,7 @@ $(document).ready(function () {
   })(jQuery);
 
   $('.literature-box .show-more-literature-list').click(function(){
-    $(this).parent().find('.more-literature-list').slideToggle();
+    $(this).parent().toggleClass('opened');
     return false;
     });//btn-open-manu
 
@@ -113,6 +113,6 @@ $('.download-pdf').click(function(e){
   e.preventDefault();
   $(".wpcf7").on('wpcf7:mailsent', function(event){
     e.preventDefault();
-  link.attr('target', "_blank");
+    link.attr('target', "_blank");
   });
 });

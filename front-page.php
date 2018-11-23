@@ -15,7 +15,8 @@ global $webshowcase;
 get_header(); ?>
 
 <main id="main">
-	<div class="top-baner" style="background-image: url(<?php echo get_field('top_background_image'); ?>)">
+	<div class="top-baner">
+		<div class="top-baner-img" style="background-image: url(<?php echo get_field('top_background_image'); ?>)"></div>
 		<div class="container">
 			<div class="top-baner-box">
 				<div class="info">

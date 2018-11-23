@@ -29,23 +29,42 @@
 }
 @media (max-width: 580px){
 	.w100-xxs{
-		width: 100% !important;
+		width: 100% !important; 
 	}
 }
+@keyframes fadeIn { 
+	0% {opacity: 0;} // CSS properties at start
+	100% {opacity: 1;} // CSS properties at end
+	}
 .text-container{
 	max-width: 950px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
+.top-baner-img{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-size: cover;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	animation: opacity 3s;
+	animation-name: fadeIn;
+}
 .top-baner{
 	background-size: cover;
 	background-position: 50%;
 	position: relative;
+	background: $clr_black;
 	.top-baner-box{
 		display: table-cell;
 		vertical-align: middle;
 		width: 1%;
 		height: 100vh;
+		position: relative;
+		z-index: 1;
 		.info{
 			max-width: 855px;
 			color: $clr_white;
@@ -328,19 +347,38 @@
 
 /* contact-us */
 .contact-us{
-	background: $clr_light;
-	padding: 60px 0;
+	background: $clr_black;
+	padding: 110px 0;
+	color: $clr_white;
+	border-bottom: 1px solid $clr_orange;
+	position: relative;
+	@media (max-width: 768px){
+		padding: 60px 0;
+	}
 	.contact-btn{
-		margin-left: 80px;
-		@media (max-width: 991px){
-			margin-left: 0;
-			margin-top: 25px;
+		margin-top: 25px;
+		position: relative;
+		z-index: 1;
+	}
+	.contact-img-after{
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 0;
+		bottom: 0; 
+		background-size: 607px;
+		background-repeat: no-repeat;
+		background-position: 97% 100%;
+		@media (max-width: 768px){
+			display: none;
 		}
 	}
 }
 .contact-text{
 	font: 300 16px/24px $font-montserrat;
 	letter-spacing: 0;
+	position: relative;
+	z-index: 1;
 	h2{
 		font: 400 40px/43px $font-gilda;
 		margin-bottom: 10px;
@@ -451,7 +489,7 @@
 
 .policy{
 	padding: 60px 0;
-    font: 300 16px/20px "Montserrat",sans-serif;
+	font: 300 16px/20px "Montserrat",sans-serif;
 	letter-spacing:0;
 	p{
 		margin-bottom: 25px;
@@ -1056,12 +1094,20 @@
 	.show-more-literature-list:focus{
 		color: $clr_orange;
 	}
+	&.opened{
+		.literature-list{
+			max-height: 1000px;
+		}
+	}
 }
 
 .literature-list{
 	list-style: none;
 	margin: 0 0 15px;
 	padding: 0;
+	max-height: 160px;
+	overflow: hidden;
+	transition: all 2s;
 	li{
 		margin-bottom: 10px;
 		a{
