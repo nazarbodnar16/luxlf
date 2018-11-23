@@ -9,7 +9,7 @@
 						<div class="team-detail-info">
 							<h2><?php echo get_the_title(); ?></h2>
 							<span class="position"><?php echo get_field('team_member_position'); ?></span>
-							<a href="#" class="print">
+							<a onclick="printFunction()" href="#" class="print">
 								<img src="<?php echo get_template_directory_uri(); ?>/images/printer.png" alt="Print icon">
 							</a>
 						</div>
@@ -18,6 +18,11 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			function printFunction() {
+			    window.print();
+			}
+		</script>
 		<div class="bottom-team-detail">
 			<div class="container">
 				<div class="row">
