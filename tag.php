@@ -140,12 +140,7 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="col-md-6">
-					<div class="subscribe-form">
-						<form action="">
-							<input class="form-control" type="text" placeholder="email address">
-							<input class="submit-btn default-btn" type="submit" value="subscribe">
-						</form>
-					</div>
+					<?php echo do_shortcode('[mc4wp_form id="239"]'); ?>
 				</div>
 			</div>
 		</div>
