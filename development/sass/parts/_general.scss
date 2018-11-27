@@ -187,6 +187,13 @@
 
 .item-list{
 	background: $clr_white;
+	&:hover{
+		.img{
+			&:before{
+				opacity: 0;
+			}
+		}
+	}
 	@media (max-width: 991px){
 		margin-bottom: 20px;
 	}
@@ -199,6 +206,21 @@
 		background-position: 50%;
 		background-repeat: no-repeat;
 		height: 240px;
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			height: 100%;
+			width: 100%;
+			mix-blend-mode: hard-light;
+			background: #333;
+			opacity: .5;
+			-webkit-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+			left: 0;
+		}
 	}
 	&--info{
 		padding: 30px 25px 25px;
@@ -280,6 +302,9 @@
 	background-size: cover;
 	background-position: 50% 75%;
 	position: relative;
+	background-repeat: no-repeat;
+	animation: opacity 3s;
+	animation-name: fadeIn;
 	&.about-baner{
 		height: 500px;
 		@media (max-width: 768px){
