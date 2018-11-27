@@ -20,7 +20,11 @@ get_header(); ?>
 		<div class="container">
 			<div class="top-baner-box">
 				<div class="info">
-					<h1 class="h1"><?php echo get_field('top_page_title'); ?></h1>
+					<!-- <h1 class="h1"><?php echo get_field('top_page_title'); ?></h1> -->
+					<h1 class="h1">
+						<span>Setting Ourself Apart Through</span>
+						<span>Performance & Determination</span>
+					</h1>
 					<div class="text-box">
 						<p><?php echo get_field('top_page_subtitle'); ?></p>
 					</div>
@@ -32,9 +36,8 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<div class="success-experience">
-		<div class="img bg-img">
-			<img src="<?php echo get_field('left_side_image'); ?>" alt="">
+	<div class="success-experience animate">
+		<div class="img  animate-img" style="background-image: url(<?php echo get_field('left_side_image'); ?>)">
 		</div>
 		<div class="container">
 			<div class="row">
