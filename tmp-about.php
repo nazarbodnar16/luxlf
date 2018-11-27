@@ -13,9 +13,8 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<div class="success-experience">
-		<div class="img bg-img">
-			<img src="<?php echo get_field('a_second_section_background'); ?>" alt="Trust image">
+	<div class="success-experience animate">
+		<div class="img animate-img" style="background-image: url(<?php echo get_field('a_second_section_background'); ?>)">
 		</div>
 		<div class="container">
 			<div class="row">
@@ -30,9 +29,8 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<div class="success-experience black-bg mod-black mod-right">
-		<div class="img bg-img">
-			<img src="<?php echo get_field('a_third_section_background'); ?>" alt="Image">
+	<div class="success-experience black-bg mod-black mod-right animate">
+		<div class="img  animate-img" style="background-image: url(<?php echo get_field('a_third_section_background'); ?>)">
 		</div>
 		<div class="container">
 			<div class="row">
@@ -62,9 +60,8 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<div class="success-experience">
-		<div class="img bg-img">
-			<img src="<?php echo get_field('a_fourth_section_background'); ?>" alt="Team image">
+	<div class="success-experience animate">
+		<div class="img animate-img" style="background-image: url(<?php echo get_field('a_fourth_section_background'); ?>)">
 		</div>
 		<div class="container">
 			<div class="row">
