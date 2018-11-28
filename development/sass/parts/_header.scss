@@ -26,6 +26,23 @@ body.home #header .main-nav ul li a:before{
       display: block;
     }
     li{
+      position: relative;
+      &.menu-item-has-children > a{
+        position: relative;
+        &:after{
+          position: absolute;
+          content: '';
+          top: 6px;
+          right: -20px;
+          border: 5px solid transparent;  
+          border-top: 5px solid $clr_white;
+          transition: all .3s;
+          @media (max-width: 991px){
+            border: 5px solid transparent;  
+            border-top: 5px solid $clr_white;
+          }
+        }
+      }
       +li{
         margin-left: 40px;
         @media (max-width: 1100px){
@@ -62,6 +79,76 @@ body.home #header .main-nav ul li a:before{
           }
         }
       }
+      &.dropdown.opened{
+        a{
+          &:after{
+            transform: rotate(-180deg);
+            top: 2px;
+          }
+        }
+      }
+      .sub-menu{
+        position: absolute;
+        background: #fff;
+        top: 28px;
+        padding: 15px!important;
+        left: 0;
+        text-align: left;
+        display: block;
+        &:before{
+          position: absolute;
+          content: '';
+          height: 35px;
+          width: 100%;
+          left: 0;
+          top: -8px;
+          background: transparent;
+        } 
+        li{
+          margin-bottom: 10px;
+          @media (max-width: 991px){
+           &:first-child{
+            padding-top: 10px;
+           }
+            &:last-child{
+            padding-bottom: 10px;
+           }
+          }
+        }
+        a{
+          color: $clr_black;
+        }
+        @media (max-width: 991px){
+          display: none;
+          position: relative;
+          left: 0;
+          padding: 0!important;
+          text-align: center; 
+          top: 0;
+          &:before{
+            display: none;
+          } 
+          
+        }
+        @media (min-width: 991px){
+          opacity: 0;
+          visibility: hidden;
+        }
+        li{
+          display: block;
+          margin-left: 0;
+        }
+      }
+      &:hover{
+        .sub-menu{
+          opacity: 1;
+          visibility: visible;
+          height: auto;
+          @media (max-width: 991px){
+            display: none;
+          }
+        }
+      }
     }
   }
   @media (max-width: 991px){
@@ -83,6 +170,20 @@ body.home #header .main-nav ul li a:before{
     display: block;
   }
 }
+
+
+.main-nav .opener{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  @media (min-width: 991px){
+    display: none;
+  }
+}
+
 .logo{
   float: left;
 }
