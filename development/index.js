@@ -23,6 +23,24 @@ $(document).ready(function () {
 
     return false;
   });*/
+$('.main-nav li').each(function(){
+    if ($(this).find('.sub-menu').length){
+      $(this).prepend('<span class="opener"></span>');
+      $(this).addClass('dropdown');
+    }
+  });//main-nav-dropdown
+
+  $('.main-nav .opener').click(function(){
+    if ($(this).parent().hasClass('opened')) {
+      $(this).parent().removeClass('opened');
+      $(this).siblings('.sub-menu').stop().slideUp(300);
+    } else{
+      $(this).parent().addClass('opened').siblings('.opened').removeClass('opened').children('.sub-menu').stop().slideUp(300);
+      $(this).siblings('.sub-menu').stop().slideDown(300);
+    };
+    return false;
+  });//main-nav-accordion
+
 
   $('<a href="#" class="open-menu"><span></span>Open Menu</a>').appendTo('#header .container');
   $('<span class="fader"/>').appendTo('body');
