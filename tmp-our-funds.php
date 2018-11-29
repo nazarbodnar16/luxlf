@@ -22,7 +22,10 @@ get_header(); ?>
 					<li><a href="#"><?php echo $fund_c['s_tab_name']; ?></a></li>
 					<li><a href="#"><?php echo $fund_c['t_tab_name']; ?></a></li>
 					<li><a href="#"><?php echo $fund_c['fo_tab_name']; ?></a></li>
-					<li><a href="#">News</a></li>
+					
+					<?php if( get_field('enable_disable_news_tab_on_page') ): ?>
+						<li><a href="#">News</a></li>
+					<?php endif; ?>					
 				</ul> <!-- / tabs -->
 			</div>
 			<div class="tab_content">
