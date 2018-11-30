@@ -893,6 +893,17 @@
 		&:first-child{
 			display: none;
 		}
+		.row{
+			.col-md-6:first-child{
+				border-right: 1px solid #262626;
+				@media (max-width: 991px){
+					border-right: none;
+					border-bottom: 1px solid #262626;
+					margin-bottom: 25px;
+					padding-bottom: 25px;
+				}
+			}
+		}
 	}
 }
 .tabs_item {
