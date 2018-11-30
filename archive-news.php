@@ -17,7 +17,7 @@ $count = 1;
 		<div class="tab">
 			<div class="tab-header ">
 				<ul class="tabs">
-					<li><a href="#">Literature</a></li>
+					<li><a href="#">Funds Documents</a></li>
 					<li><a href="#">White Papers</a></li>
 					<li><a href="#">News</a></li>
 				</ul> <!-- / tabs -->
@@ -28,8 +28,8 @@ $count = 1;
 						<div class="row">
 							<div class="col-md-6">
 								<div class="literature-box">
-									<h2>PENLIFA LX</h2>
-									<h3>Long Term Growth Fund</h3>
+									<h2><?php echo get_field('ltgf_column_title', 'option') ?></h2>
+									<h3><?php echo get_field('ltgf_column_subtitle', 'option') ?></h3>
 									<ul class="literature-list">
 
 										<?php
@@ -61,15 +61,15 @@ $count = 1;
 							</div>
 							<div class="col-md-6">
 								<div class="literature-box">
-									<h2>PENLIFA LX</h2>
-									<h3>Long Term Growth Fund</h3>
+									<h2><?php echo get_field('arf_column_title', 'option') ?></h2>
+									<h3><?php echo get_field('arf_column_subtitle', 'option') ?></h3>
 									<ul class="literature-list">
 
 										<?php
 										// check if the repeater field has rows of data
-										if( have_rows('literature_items', 'option') ):
+										if( have_rows('absolute_return_fund_item', 'option') ):
 										 	// loop through the rows of data
-										    while ( have_rows('literature_items', 'option') ) : the_row(); ?>
+										    while ( have_rows('absolute_return_fund_item', 'option') ) : the_row(); ?>
 										        
 										    <li>
 												<a class="lit-dload" data-attr="lit-el-dload-<?php echo $count; ?>" data-toggle="modal" data-cookie-target="#download-modal">
