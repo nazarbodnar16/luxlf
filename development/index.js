@@ -97,7 +97,7 @@ $(function(){
       return false;
     });//btn-open-manu
 
-    if ($.cookie('modalshow') === null) 
+/*    if ($.cookie('modalshow') === null) 
     {
        // Show the modal
        $('#myModal').modal({
@@ -110,11 +110,11 @@ $(function(){
 
        // Create cookie to expire in 168 hours (1 week)
        $.cookie("modalshow", "false", { path: '/', expires: expiryDate });
-     }
+     }*/
    });
 
 
-if (document.cookie.indexOf("modalshow=true") < 0) {
+/*if (document.cookie.indexOf("modalshow=true") < 0) {
   $('#notice').modal('show');
   $('#myModal').modal({
     backdrop: 'static',
@@ -125,7 +125,7 @@ if (document.cookie.indexOf("modalshow=true") < 0) {
   expiryDate.setTime(expiryDate.getTime() + (hours * 3600 * 1000));
   document.cookie = "modalshow=true; expires=" + expiryDate + "; path=/";
 }
-
+*/
 $('.download-pdf').click(function(e){
   var link = $(this).parents('.news-list--item').find('.download-file');
   e.preventDefault();
