@@ -10,7 +10,7 @@
 #notice{
 	.modal-dialog{
 		max-width: 790px;
-		margin: 40px 0 20px;
+		margin: 20px 0 20px;
 		width: 100%;
 		font: 300 13px/18px $font-montserrat;
 		top: 50%;
@@ -46,6 +46,7 @@
 				overflow-y: auto;
 				@media (max-width: 768px){
 					padding: 15px 20px;
+					max-height: 40vh;
 				}
 				p{
 					margin-bottom: 25px;
@@ -220,7 +221,7 @@
 				}
 			}
 			.modal-body{
-				padding: 20px;
+				padding: 10px 20px;
 				.contact-form{
 					background: transparent;
 					padding: 0;
@@ -257,6 +258,9 @@
 				position: relative;
 				text-align: center;
 				font: 300 16px/24px $font-montserrat;
+				@media (max-width: 768px){
+					padding: 10px 15px 10px;
+				}
 				span{
 					display: inline-block;
 				}
@@ -274,6 +278,9 @@
 			}
 			.modal-body{
 				padding: 20px;
+				@media (max-width: 768px){
+					padding: 10px 20px;
+				}
 				.contact-form{
 					background: transparent;
 					padding: 0;
