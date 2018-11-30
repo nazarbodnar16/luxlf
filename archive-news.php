@@ -26,7 +26,40 @@ $count = 1;
 				<div class="tabs_item literature_item" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/p-bg.png">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-12">
+							<div class="col-md-6">
+								<div class="literature-box">
+									<h2>PENLIFA LX</h2>
+									<h3>Long Term Growth Fund</h3>
+									<ul class="literature-list">
+
+										<?php
+										// check if the repeater field has rows of data
+										if( have_rows('literature_items', 'option') ):
+										 	// loop through the rows of data
+										    while ( have_rows('literature_items', 'option') ) : the_row(); ?>
+										        
+										    <li>
+												<a class="lit-dload" data-attr="lit-el-dload-<?php echo $count; ?>" data-toggle="modal" data-cookie-target="#download-modal">
+													<span class="ico">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/ico-pdf.png" alt="">
+													</span>
+													<span class="link-text"><?php the_sub_field('item_title'); ?></span>
+												</a>
+												<a class="lit-dlink-true" data-attr="lit-el-dload-<?php echo $count; ?>" href="<?php the_sub_field('file_upload'); ?>"></a>
+											</li>
+
+										<?php $count++;
+										endwhile;
+										else :
+										    // no rows found
+										endif;
+										?>
+
+									</ul>
+									<a href="" class="default-link show-more-literature-list">Monthly Commentary Archives</a>
+								</div>
+							</div>
+							<div class="col-md-6">
 								<div class="literature-box">
 									<h2>PENLIFA LX</h2>
 									<h3>Long Term Growth Fund</h3>
