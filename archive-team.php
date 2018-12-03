@@ -26,143 +26,31 @@
 	<div class="team-list">
 		<div class="container">
 			<div class="row">
+				<?php 
 
+				$posts = get_field('team_member_board', 'cpt_team');
 
-<?php 
+				if( $posts ): ?>
 
-$posts = get_field('team_member_board', 'cpt_team');
+				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+				        <?php setup_postdata($post); ?>
 
-if( $posts ): ?>
+				        		<div class="col-md-4">
+									<a class="team-item" href="<?php the_permalink(); ?>">
+										<div class="img bg-img">
+											<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">
+										</div>
+										<span class="descr">
+											<span class="name"><?php echo get_the_title(); ?></span>
+											<span class="possition"><?php echo get_field('team_member_position'); ?></span>
+										</span>
+									</a>
+								</div>
 
-    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-        <?php setup_postdata($post); ?>
+				    <?php endforeach; ?>
 
-        		<div class="col-md-4">
-					<a class="team-item" href="<?php the_permalink(); ?>">
-						<div class="img bg-img">
-							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">
-						</div>
-						<span class="descr">
-							<span class="name"><?php echo get_the_title(); ?></span>
-							<span class="possition"><?php echo get_field('team_member_position'); ?></span>
-						</span>
-					</a>
-				</div>
-
-    <?php endforeach; ?>
-
-    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-<?php endif; ?>
-
-
-
-
-
-
-
-
-
-
-
-<!-- 				<div class="col-md-4">
-					<a class="team-item" href="/team-details">
-						<div class="img bg-img">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/1.png" alt="">
-						</div>
-						<span class="descr">
-							<span class="name">Jose Garcia</span>
-							<span class="possition">Chief Executive Officer</span>
-						</span>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a class="team-item" href="/team-details">
-						<div class="img bg-img">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/2.png" alt="">
-						</div>
-						<span class="descr">
-							<span class="name">Jose Garcia</span>
-							<span class="possition">Chief Executive Officer</span>
-						</span>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a class="team-item" href="/team-details">
-						<div class="img bg-img">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/3.png" alt="">
-						</div>
-						<span class="descr">
-							<span class="name">Jose Garcia</span>
-							<span class="possition">Chief Executive Officer</span>
-						</span>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a class="team-item" href="/team-details">
-						<div class="img bg-img">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/4.png" alt="">
-						</div>
-						<span class="descr">
-							<span class="name">Jose Garcia</span>
-							<span class="possition">Chief Executive Officer</span>
-						</span>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a class="team-item" href="/team-details">
-						<div class="img bg-img">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/5.png" alt="">
-						</div>
-						<span class="descr">
-							<span class="name">Jose Garcia</span>
-							<span class="possition">Chief Executive Officer</span>
-						</span>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a class="team-item" href="/team-details">
-						<div class="img bg-img">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/6.png" alt="">
-						</div>
-						<span class="descr">
-							<span class="name">Jose Garcia</span>
-							<span class="possition">Chief Executive Officer</span>
-						</span>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a class="team-item" href="/team-details">
-						<div class="img bg-img">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/7.png" alt="">
-						</div>
-						<span class="descr">
-							<span class="name">Jose Garcia</span>
-							<span class="possition">Chief Executive Officer</span>
-						</span>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a class="team-item" href="/team-details">
-						<div class="img bg-img">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/8.png" alt="">
-						</div>
-						<span class="descr">
-							<span class="name">Jose Garcia</span>
-							<span class="possition">Chief Executive Officer</span>
-						</span>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a class="team-item" href="/team-details">
-						<div class="img bg-img">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/9.png" alt="">
-						</div>
-						<span class="descr">
-							<span class="name">Jose Garcia</span>
-							<span class="possition">Chief Executive Officer</span>
-						</span>
-					</a>
-				</div> -->
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
@@ -172,7 +60,7 @@ if( $posts ): ?>
 				<div class="col-md-6">
 					<div class="contact-text">
 						<h2>Contact Us</h2>
-						<p>Tap into our wealth of experience and expertise. The conversation starts with you.</p>
+						<p>We offer unique options to a diverse range of investors.</p>
 					</div>
 					<div class="contact-btn">
 						<a class="default-btn" href="" data-toggle="modal" data-target="#contact-modal">info@cmclux.com</a>
