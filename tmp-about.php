@@ -82,7 +82,7 @@ get_header(); ?>
 				<div class="col-md-6">
 					<div class="contact-text">
 						<h2>Contact Us</h2>
-						<p>Tap into our wealth of experience and expertise. The conversation starts with you.</p>
+						<p>We offer unique options to a diverse range of investors.</p>
 					</div>
 					<div class="contact-btn">
 						<a class="default-btn" href="" data-toggle="modal" data-target="#contact-modal">info@cmclux.com</a>

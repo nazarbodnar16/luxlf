@@ -22,16 +22,13 @@ get_header(); ?>
 				<div class="info">
 					<!-- <h1 class="h1"><?php echo get_field('top_page_title'); ?></h1> -->
 					<h1 class="h1">
-						<span>Setting Ourself Apart Through</span>
-						<span>Performance & Determination</span>
+						<span><?php echo get_field('top_page_title'); ?></span>
+						<span><?php echo get_field('top_page_title_second_row'); ?></span>
 					</h1>
 					<div class="text-box">
 						<p><?php echo get_field('top_page_subtitle'); ?></p>
 					</div>
 					<a href="<?php echo get_field('top_page_link'); ?>" class="default-link"><?php echo get_field('top_page_link_title'); ?></a>
-					<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notice">Launch demo modal</button> -->
-					<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact-modal">Launch demo modal</button> -->
-					<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#download-modal">Launch demo modal</button> -->
 				</div>
 			</div>
 		</div>
