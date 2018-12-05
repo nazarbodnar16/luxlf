@@ -45,21 +45,6 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<div class="subscribe">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="subscribe-text">
-						<h2>Subscribe to News & Updates</h2>
-						<p>Get the latest news from the Carlisle Management Company team.</p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<?php echo do_shortcode('[mc4wp_form id="239"]'); ?>
-				</div>
-			</div>
-		</div>
-	</div>
 	<div class="success-experience animate">
 		<div class="img animate-img" style="background-image: url(<?php echo get_field('a_fourth_section_background'); ?>)">
 		</div>
@@ -72,6 +57,21 @@ get_header(); ?>
 							<p><?php echo get_field('a_fourth_section_description'); ?></p>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="subscribe">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="subscribe-text">
+						<h2>Subscribe to News & Updates</h2>
+						<p>Get the latest news from the Carlisle Management Company team.</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<?php echo do_shortcode('[mc4wp_form id="239"]'); ?>
 				</div>
 			</div>
 		</div>

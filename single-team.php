@@ -32,10 +32,10 @@
 								<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">
 							</div>
 							<strong>
-								<a class="default-link no-after" href="#">CMCLUX.COM</a>
+								<a class="default-link no-after" target="_blank" href="http://cmclux.com/">CMCLUX.COM</a>
 							</strong>
 							<strong>
-								<a class="default-link no-after" href="#">CONTACT</a>
+								<a class="default-link no-after" href="mailto:info@cmclux.com">CONTACT</a>
 							</strong>
 						</div>
 					</div>

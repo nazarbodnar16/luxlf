@@ -41,7 +41,7 @@ get_header(); ?>
 						</div>
 
 						<p>The personal information we collect is used for the purpose for which it was provided to us. We endeavor to keep your personal information  with appropriate level of security and will keep it on record for as long as we need for legitimate business or legal reasons. We will then delete it safely and securely.</p>
-						<p>For more information about how Luxembourg Life Fund site processes your personal data, please view our <a class="clr_orange " href="/privacy-policy/">privacy statement.</a></p>
+						<p>For more information about how Luxembourg Life Fund site processes your personal data, please view our <a class="clr_orange " href="/terms-conditions/">privacy statement.</a></p>
 					</div>
 				</div>
 			</div>
