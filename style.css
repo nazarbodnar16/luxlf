@@ -68,3 +68,6 @@ ul.tabs{
 .top-baner .top-baner-box .info{
 	max-width: 915px !important;
 }
+.some{
+    text-transform: uppercase;
+}
